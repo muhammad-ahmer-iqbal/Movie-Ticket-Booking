@@ -168,7 +168,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
+                    <a href="movie-1.php" target="_blank">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
