@@ -180,7 +180,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-4">
-                                <a href="#">
+                                <a href="movie-1.php" target="_blank">
                                 
                                     <div class="movie-related-card">
                                         <img src="./assets/card-2.jpg" width="100%" alt="card">
@@ -223,7 +223,7 @@
                             <h4>Recent</h4>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="movie-1.php" target="_blank">
 
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
