@@ -139,7 +139,7 @@
             </div>
             <div class="row mb-4">
                 <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="movie.php" target="_blank">
+                    <a href="Tom-and-jerry-movie.php" target="_blank">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -168,7 +168,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="movie-1.php" target="_blank">
+                    <a href="how-to-train-your-dragon-movie.php" target="_blank">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -197,7 +197,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
+                    <a href="Rio-movie.php" target="_blank">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -226,7 +226,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
+                    <a href="The-baby-boss-movie.php" target="_blank">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
