@@ -52,12 +52,12 @@
                 </div>
             </div>
             <div class="movie-heading my-4">
-                <h2>TOM AND JERRY</h2>
+                <h2>TEEFA IN TROUBLE</h2>
             </div>
             <div class="row my-4">
                 <div class="col-lg-6">
                     <div class="movie-img">
-                        <img src="assets\card-1.jpg" class="img-fluid" width="100%" alt="Movie">
+                        <img src="assets\card-7.jpg" class="img-fluid" width="100%" alt="Movie">
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-center">
@@ -92,9 +92,9 @@
                                     <h6>: English, Hindi</h6>
                                     <h6>: On Show</h6>
                                     <h6>:
-                                        <a href="https://www.imdb.com/title/tt1361336/" target="_blank">
+                                        <a href="https://www.imdb.com/title/tt8043306/?ref_=fn_al_tt_1" target="_blank">
                                             <span class="rate-text">IMDB</span>
-                                            <span class="rate-no">5.3</span>
+                                            <span class="rate-no">7.2</span>
                                         </a>
                                     </h6>
 
@@ -103,10 +103,10 @@
                             <div class="story-line mt-3">
                                 <h5>Storyline</h5>
                                 <p>
-                                    Tom & Jerry (marketed as Tom & Jerry: The Movie)[5] is a 2021 American live-action/computer-animated slapstick comedy film based on the titular cartoon characters of the same name created by William Hanna and Joseph Barbera, produced by the Warner Animation Group and distributed by Warner Bros. Pictures. It is the second theatrical film based on the characters following 1992's Tom and Jerry: The Movie. The film follows Tom teaming up with a young employee named Kayla to exterminate Jerry, a mouse who takes refuge in New York City's fanciest hotel, before his presence threatens the hotel and its important wedding set to take place on the hotel grounds.
+                                    How To Train Your Dragon (marketed as Tom & Jerry: The Movie)[5] is a 2021 American live-action/computer-animated slapstick comedy film based on the titular cartoon characters of the same name created by William Hanna and Joseph Barbera, produced by the Warner Animation Group and distributed by Warner Bros. Pictures. It is the second theatrical film based on the characters following 1992's Tom and Jerry: The Movie. The film follows Tom teaming up with a young employee named Kayla to exterminate Jerry, a mouse who takes refuge in New York City's fanciest hotel, before his presence threatens the hotel and its important wedding set to take place on the hotel grounds.
                                 </p>
                                 <p class="mt-2">
-                                    Tom & Jerry was theatrically released by Warner Bros. Pictures in the United States on February 26, 2021, along with a one-month simultaneous streaming release on HBO Max. The film has grossed over $131 million on a $79 million budget and received generally negative reviews from critics, who criticized the human characters and screenplay.
+                                    The was theatrically released by Warner Bros. Pictures in the United States on February 26, 2021, along with a one-month simultaneous streaming release on HBO Max. The film has grossed over $131 million on a $79 million budget and received generally negative reviews from critics, who criticized the human characters and screenplay.
                                 </p>
                             </div>
                         </div>
@@ -193,12 +193,11 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h5 class="modal-title text-danger" id="exampleModalLabel">TOM AND JERRY</h5>
+                    <h5 class="modal-title text-danger" id="exampleModalLabel">TEEFA IN TROUBLE</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/kP9TfCWaQT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jw5dTVTX9zo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

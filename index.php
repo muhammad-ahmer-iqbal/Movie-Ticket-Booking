@@ -32,19 +32,8 @@
 
     <!-- Sub-header Start -->
 
-    <div class="sub-header">
-        <div class="container">
-            <div class="row">
-                <div class="icon-div">
-                    <div class="icon float-end">
-                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                        <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
-                        <a href="#"><i class="fa fa-google fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include 'header.php'; ?>
+
     <!-- Sub-header End -->
 
     <!-- Banner Start -->
@@ -74,568 +63,427 @@
 
     <!-- Navbar Start -->
 
-    <nav class="navbar navbar-expand-lg sticky-top bg mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets\Logo.png" alt="Logo" width="100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item me-4">
-                        <a class="nav-link active" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item dropdown me-4">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Movies
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">On Show</a></li>
-                            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown me-4">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Theater
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-
-                    <li class="nav-item">
-                        <a class="nav-link border-right" href="#">Register Now </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <!-- Navbar End -->
 
     <!-- Index Center Content Start -->
 
-    <div class="index-center-content mb-4">
-        <div class="container">
-            <div class="movie mb-4">
-                <div class="heading">
-                    <h2>Latest Moives</h2>
-                </div>
+    <div class="container mb-5">
+
+        <div class="movie my-5">
+            <div class="heading">
+                <h2>Movies</h2>
             </div>
-            <div class="row mb-4">
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="Tom-and-jerry-movie.php" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-1.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
+        </div>
 
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
+        <div class="row">
 
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="Tom-and-jerry-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
 
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
 
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
+                            <h6>View</h6>
+                            <h5>100616</h5>
 
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Tom And Jerry</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="how-to-train-your-dragon-movie.php" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-2.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">How Train Your Dragon</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="Rio-movie.php" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-3.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Rio</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="The-baby-boss-movie.php" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-4.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">The Baby Boss</h5>
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
                         </div>
                     </a>
                 </div>
             </div>
 
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="how-to-train-your-dragon-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-2.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
 
-            <div class="row mb-4">
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-5.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
 
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
+                            <h6>View</h6>
+                            <h5>100616</h5>
 
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Jawani Phir Nahi Ani 2</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-6.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">The Donkey King</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-7.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Teefa In Trouble</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-8.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Parchi</h5>
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
                         </div>
                     </a>
                 </div>
             </div>
 
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="Rio-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-3.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
 
-            <div class="row mb-4">
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-9.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
 
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
+                            <h6>View</h6>
+                            <h5>100616</h5>
 
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">V</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-10.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Mafia</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-11.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Cold Case</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-12.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">A1 Express</h5>
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
                         </div>
                     </a>
                 </div>
             </div>
 
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="The-baby-boss-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-4.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
 
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
 
-            <div class="row mb-4">
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-13.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
+                            <h6>View</h6>
+                            <h5>100616</h5>
 
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Fast And Furious 9</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-14.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Major Grom</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-15.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Army Of The Dead</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="#" target="_blank">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/card-16.jpg" alt="Avatar" style="width:100%;height:320px;">
-                                </div>
-                                <div class="flip-card-back">
-
-                                    <h6>Publishing Date</h6>
-                                    <h5>17 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>Release Date</h6>
-                                    <h5>26 Feb,</h5>
-                                    <h5>2021</h5>
-
-                                    <h6>View</h6>
-                                    <h5>100616</h5>
-
-                                    <h6>Downloads</h6>
-                                    <h5>29085</h5>
-
-                                </div>
-                            </div>
-                            <h5 class="movie-text text-center pt-2">Wonder Women 1984</h5>
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
                         </div>
                     </a>
                 </div>
             </div>
 
         </div>
+
+        <div class="row my-5">
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="jawani-phir-nahi-ani-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-5.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="donkey-king-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-6.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="teefa-in-trouble-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-7.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="parchi-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-8.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my-5">
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="v-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-9.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="mafia-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-10.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="cold-case-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-11.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="a1-express-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-12.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-5">
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="f9-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-13.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="major-grom-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-14.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="army-of-the-dead-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-15.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content">
+                    <a href="wonder-women-movie.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/card-16.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h6>Publishing Date</h6>
+                            <h5>17 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>Release Date</h6>
+                            <h5>26 Feb,</h5>
+                            <h5>2021</h5>
+
+                            <h6>View</h6>
+                            <h5>100616</h5>
+
+                            <h6>Downloads</h6>
+                            <h5>29085</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- Index Center Content End -->
 
     <!-- Footer Start -->
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <p class="text-center">
-                    Copyrights © 2021 ticket.com
-                </p>
-                <p class="text-center">
-                    ticket.com is not responsible for the content of external internet sites.
-                </p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <!-- Footer End -->
 
