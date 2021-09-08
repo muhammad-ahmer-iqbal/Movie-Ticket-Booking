@@ -21,6 +21,19 @@ hr{
     padding: 10px 0px;
     background-color: black !important;
 }
+.breadcrumb-item+.breadcrumb-item::before{
+    color: white;
+}
+.breadcrumb .breadcrumb-item {
+    color: white;
+}
+.breadcrumb .breadcrumb-item a {
+    color: white;
+    transition: all ease-in-out 0.3s;
+}
+.breadcrumb .breadcrumb-item a:hover {
+    color: rgb(224, 223, 223);
+}
 .sub-header .icon-div .icon .fa-facebook{
     margin: 0 5px;
     padding: 10px 12px;
@@ -28,6 +41,9 @@ hr{
     background-color: white;
     color: red;
     transition: all ease-in-out 0.3s;
+}
+.icon-div .icon{
+    float: right;
 }
 .sub-header .icon-div .icon .fa-facebook:hover{
     background-color: #1877f2;
@@ -45,7 +61,7 @@ hr{
     background-image: radial-gradient(#5e4fcc, #d42b86, #f8b860);
     color: white;
 }
-.sub-header .icon-div .icon .fa-google{
+.sub-header .icon-div .icon .fa-twitter{
     margin: 0 5px;
     padding: 10px;
     border-radius: 20px;
@@ -53,9 +69,9 @@ hr{
     color: red;
     transition: all ease-in-out 0.3s;
 }
-.sub-header .icon-div .icon .fa-google:hover{
-    background-color: white;
-    color: #4285f4;
+.sub-header .icon-div .icon .fa-twitter:hover{
+    background-color: #1c9cea;
+    color: white;
 }
 
 /* Sub header End */
@@ -90,9 +106,8 @@ hr{
     width: 20%;
 }
 .navbar-brand img{
-    width: 50%;
+    width: 40%;
 }
-
 .bg{
     background-color: black;
 }
@@ -113,8 +128,7 @@ hr{
 }
 .dropdown-menu .dropdown-item{
     transition: all ease-in-out 0.3s;
-    color: red;
-    /* border-bottom: 1px solid white; */
+    color: white;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
@@ -276,6 +290,21 @@ img {
 }
 
 /* Movie Center Content End */
+
+/* Theater inner page Content Start */
+
+.heading h1{
+    font-weight: 400;
+}
+.info-and-location p{
+    text-align: justify;
+}
+
+/* Theater inner page Content End */
+
+.heading h1{
+    font-weight: 500;
+}
 
 /* Footer Start */
 

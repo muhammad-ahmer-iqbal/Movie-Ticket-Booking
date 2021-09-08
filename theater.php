@@ -91,7 +91,7 @@
         <div class="row mb-5">
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -102,7 +102,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -113,7 +113,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -124,54 +124,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-lg-3">
-                <div class="content">
-                    <a href="#">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="content">
-                    <a href="#">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="content">
-                    <a href="#">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -185,7 +138,7 @@
         <div class="row mb-5">
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -196,7 +149,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -207,7 +160,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">
@@ -218,7 +171,54 @@
             </div>
             <div class="col-lg-3">
                 <div class="content">
-                    <a href="#">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/Theater-1.jpg">
                         <div class="content-details fadeIn-bottom">

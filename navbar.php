@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
+
 <body>
     <!-- Navbar Start -->
 
     <nav class="navbar navbar-expand-lg sticky-top bg mb-4">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <!-- <img src="assets\Logo.png" alt="Logo"> -->
+                <img src="assets\Logo.png" class="img-fluid" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,7 +40,7 @@
                         <a class="nav-link" href="theater.php">Theater</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
@@ -56,4 +58,5 @@
 
     <!-- Navbar End -->
 </body>
+
 </html>
