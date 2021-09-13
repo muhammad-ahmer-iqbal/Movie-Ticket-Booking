@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Ticket.com</title>
+    <title>Booking Form - Ticket.com</title>
 
     <!-- bootstrap 5 Start -->
 
@@ -48,8 +48,23 @@
         <div class="container">
             <div class="heading">
                 <h1 class="display-3 text-center">
-                    Contact Us
+                    Booking
                 </h1>
+            </div>
+            <div class="form">
+                <form action="#">
+                    <div class="row input-group mb-3">
+                        <div class="col-md-6">
+                            <label for="first-name" class="form-label">First name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="last-name" class="form-label">Last name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

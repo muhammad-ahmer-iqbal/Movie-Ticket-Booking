@@ -39,9 +39,6 @@
                     <li class="nav-item me-4">
                         <a class="nav-link" href="theater.php">Theater</a>
                     </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
-                    </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
 
