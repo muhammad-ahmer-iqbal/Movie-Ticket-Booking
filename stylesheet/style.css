@@ -124,7 +124,7 @@ hr{
     color: red !important;
     border-bottom: 1px solid red;
 }
-.dropdown-menu{
+/* .dropdown-menu{
     background-color: black;
 }
 .dropdown-menu .dropdown-item{
@@ -135,7 +135,6 @@ hr{
 }
 .dropdown-menu .dropdown-item:hover{
     color: white;
-    /* background-color: red; */
     background-image: radial-gradient(red, black);
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -143,7 +142,7 @@ hr{
 .dropdown-item.active, .dropdown-item:active{
     color: white !important;
     background-image: radial-gradient(red, black);
-}
+} */
 .border-right{
     border-right: 1px solid white;
 }
@@ -321,3 +320,25 @@ footer p{
 }
 
 /* Footer End */
+
+/* Form Start */
+
+.register{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+input{
+    border: none !important;
+    border-bottom: 1px solid black !important;
+}
+.form-check-input{
+    border: 1px solid black !important;
+}
+.btn-login a{
+    color: green;
+}
+.btn-login a:hover{
+    color: white;
+}
+
+/* Form End */

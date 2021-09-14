@@ -25,16 +25,13 @@
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="about-us.php">About Us</a>
                     </li>
-                    <li class="nav-item dropdown me-4">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Movies
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">On Show</a></li>
-                            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
-                        </ul>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="on-show.php">On Show</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="coming-soon.php">Coming Soon</a>
                     </li>
                     <li class="nav-item me-4">
                         <a class="nav-link" href="theater.php">Theater</a>
@@ -43,11 +40,12 @@
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <a class="nav-link border-right" href="#">Register Now </a>
+                        <a class="nav-link border-right" href="register.php">Register Now </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
