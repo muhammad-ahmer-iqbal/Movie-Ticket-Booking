@@ -48,7 +48,7 @@
         <div class="container">
             <div class="movie my-4">
                 <div class="heading">
-                    <h2>On Show</h2>
+                    <h2>Coming Soon</h2>
                 </div>
             </div>
             <div class="movie-heading my-4">
@@ -117,48 +117,9 @@
                     <hr>
                 </div>
 
-                <div class="row">
-
-                    <div class="col-lg-6">
-                        <div class="terms-and-condition">
-                            <h4>Terms And Condition</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis?</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="theater">
-                            <h4 class="mb-3">Available In Theaters</h4>
-                            <div class="row">
-
-                                <div class="col-lg-6">
-                                    <div class="content">
-                                        <a href="#">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="./assets/card-2.jpg">
-                                            <div class="content-details fadeIn-bottom">
-                                                <button class="btn book-btn btn-danger">Book Now</button>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="content">
-                                        <a href="#">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="./assets/card-2.jpg">
-                                            <div class="content-details fadeIn-bottom">
-                                                <button class="btn book-btn btn-danger">Book Now</button>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="terms-and-condition">
+                    <h4>Terms And Condition</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum deserunt id nulla iste doloribus voluptate delectus tempora quos similique illum tenetur corporis consequatur, dolorem eligendi. Ab, quae provident? Veritatis?</p>
                 </div>
 
             </div>

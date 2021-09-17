@@ -28,100 +28,38 @@
 
 </head>
 
-<body>
+<body class="body">
 
-    <!-- Sub-header Start -->
+    <!-- Login Start -->
 
-    <?php include 'header.php'; ?>
-
-    <!-- Sub-header End -->
-
-    <!-- Banner Start -->
-
-    <div class="banner">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/atrium-slide-1.jpg" class="d-block" alt="Moive-Img">
+    <div class="login">
+        <div class="container">
+            <div class="login-body">
+                <div class="heading text-center">
+                    <a href="index.php">
+                        <img class="my-5" src="assets/Logo.png" width="20%" alt="Logo">
+                    </a>
                 </div>
-                <div class="carousel-item">
-                    <img src="./assets/centaurus-slide-2.jpg" class="d-block" alt="Moive-Img">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/atrium-slide-3.jpg" class="d-block" alt="Moive-Img">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/centaurus-slide-4.jpg" class="d-block" alt="Moive-Img">
+                <div class="inputs">
+                    <form action="#">
+                        <div class="input mb-4">
+                            <input type="text" class="form-control" placeholder="Username*">
+                        </div>
+                        <div class="input mb-5">
+                            <input type="password" class="form-control" placeholder="Password*">
+                        </div>
+
+                        <div class="login-btn mb-3 text-center">
+                            <button type="submit" class="btn">Login</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Banner End -->
 
-    <!-- Navbar Start -->
-
-    <?php include 'navbar.php'; ?>
-
-    <!-- Navbar End -->
-
-    <!-- Register Center Content Start -->
-    <div class="container register">
-
-        <div class="movie my-5">
-            <div class="heading">
-                <h2>Login Now</h2>
-            </div>
-        </div>
-
-        <div class="form">
-            <form action="#">
-
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Enter Your Username*">
-                </div>
-
-                <div class="mb-3">
-                    <input type="password" class="form-control" placeholder="Enter Your Password*">
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Remember me
-                    </label>
-                </div>
-
-                <div class="d-grid gap-2 mt-5">
-                    <button class="btn btn-outline-dark" type="button">Login</button>
-                </div>
-                <div class="d-grid gap-2 mt-4 mb-5">
-                    <button class="btn btn-login btn-outline-success" type="button">
-                        <a href="register.php">Create have an account?Register</a>
-                    </button>
-                </div>
-
-            </form>
-        </div>
-
-    </div>
-
-
-
-
-    <!-- Register Center Content End -->
-
-    <!-- Footer Start -->
-
-    <?php include 'footer.php'; ?>
-
-    <!-- Footer End -->
+    <!-- Login Start -->
 
 </body>
 

@@ -24,12 +24,12 @@
 <body>
     <div class="sidebar">
         <div class="logo-details">
-            <div class="logo_name">Theater.com</div>
+            <div class="logo_name ">Theater.com</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
             <li>
-                <a href="#">
+                <a href="dashboard.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
@@ -97,8 +97,32 @@
         </ul>
     </div>
     <section class="home-section">
-        <div class="text">
-            <img src="assets\Logo.png" width="20%">
+        <div class="text w-100">
+            <div class="text-center ">
+                <h1 class="text-center text-light">THEATER.COM</h1>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="home-section-1">
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row ml-5">
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/card-1.jpg" width="100%" alt="Card">
+                            </div>
+                            <div class="col-md-8">
+                            <div class="card-heading">
+                                <h1>Moives</h1>
+                                <h4>25</h4>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script>

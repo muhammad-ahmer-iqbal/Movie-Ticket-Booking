@@ -73,11 +73,11 @@
 
         <div class="movie my-5">
             <div class="heading">
-                <h2>Movies</h2>
+                <h2>On Show</h2>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mb-5">
 
             <div class="col-md-3">
                 <div class="content">
@@ -175,206 +175,18 @@
                 </div>
             </div>
 
+        </div> 
+
+        <div class="read-more text-center">
+            <a href="on-show.php">
+                See More
+            </a>
         </div>
 
-        <div class="row my-5">
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="jawani-phir-nahi-ani-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-5.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
+        <div class="movie my-5">
+            <div class="heading">
+                <h2>Coming Soon</h2>
             </div>
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="donkey-king-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-6.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="teefa-in-trouble-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-7.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="parchi-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-8.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row my-5">
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="v-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-9.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="mafia-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-10.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="cold-case-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-11.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="content">
-                    <a href="a1-express-movie.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/card-12.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>Release Date</h6>
-                            <h5>26 Feb,</h5>
-                            <h5>2021</h5>
-
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
         </div>
 
         <div class="row mb-5">
@@ -475,6 +287,71 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="read-more text-center">
+            <a href="coming-soon.php">
+                See More
+            </a>
+        </div>
+
+        <div class="movie my-5">
+            <div class="heading">
+                <h2>Theaters</h2>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="content">
+                    <a href="theater-inner-page.php">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="./assets/Theater-1.jpg">
+                        <div class="content-details fadeIn-bottom">
+                            <h1>Neuplex Theater</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="read-more text-center">
+            <a href="theater.php">
+                See More
+            </a>
         </div>
 
     </div>

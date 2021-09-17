@@ -29,7 +29,7 @@
         </div>
         <ul class="nav-list">
             <li>
-                <a href="#">
+                <a href="dashboard.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
@@ -97,8 +97,10 @@
         </ul>
     </div>
     <section class="home-section">
-        <div class="text">
-            <img src="assets\Logo.png" width="20%">
+        <div class="text w-100">
+            <div class="text-center ">
+                <h1 class="text-center text-light">THEATER.COM</h1>
+            </div>
         </div>
     </section>
     <br>
