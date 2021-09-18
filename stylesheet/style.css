@@ -136,25 +136,6 @@ hr {
 	color: red !important;
 	border-bottom: 1px solid red;
 }
-/* .dropdown-menu{
-    background-color: black;
-}
-.dropdown-menu .dropdown-item{
-    transition: all ease-in-out 0.3s;
-    color: white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-}
-.dropdown-menu .dropdown-item:hover{
-    color: white;
-    background-image: radial-gradient(red, black);
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-}
-.dropdown-item.active, .dropdown-item:active{
-    color: white !important;
-    background-image: radial-gradient(red, black);
-} */
 .border-right {
 	border-right: 1px solid white;
 }
@@ -410,5 +391,17 @@ input {
 	color: black;
 	text-decoration: underline;
 }
-
+.input select{
+	border: none;
+	border-bottom: 1px solid black;
+}
+.btn-booking button{
+	width: 100%;
+	border: 1px solid red;
+}
+.btn-booking button:hover{
+	border: 1px solid red;
+	background-color: black;
+	color: white;
+}
 /* Form End */

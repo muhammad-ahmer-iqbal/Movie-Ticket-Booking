@@ -84,22 +84,35 @@
                 </a>
                 <span class="tooltip">Setting</span>
             </li>
-            <li class="profile">
-                <div class="profile-details">
-                    <img src="profile.jpg" alt="profileImg">
-                    <div class="name_job">
-                        <div class="name">Prem Shahi</div>
-                        <div class="job">Web designer</div>
-                    </div>
-                </div>
-                <i class='bx bx-log-out' id="log_out"></i>
-            </li>
         </ul>
     </div>
     <section class="home-section">
         <div class="text w-100">
-            <div class="text-center ">
-                <h1 class="text-center text-light">THEATER.COM</h1>
+            <div class="row">
+                <div class="col-4 align-self-center">
+                    <div class="text">
+                        <h5 class="text-light">Date</h5>
+                        <h5 class="text-light">Time</h5>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="text">
+                        <h1 class="text-center text-light">THEATER.COM</h1>
+                    </div>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="text-end">
+                        <div class="dropdown">
+                            <button class="btn text-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/user.png" alt="profile">
+                                John Doe
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -114,10 +127,10 @@
                                 <img src="assets/card-1.jpg" width="100%" alt="Card">
                             </div>
                             <div class="col-md-8">
-                            <div class="card-heading">
-                                <h1>Moives</h1>
-                                <h4>25</h4>
-                            </div>
+                                <div class="card-heading">
+                                    <h1>Moives</h1>
+                                    <h4>25</h4>
+                                </div>
                             </div>
                         </div>
                     </div>

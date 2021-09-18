@@ -145,7 +145,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="content">
-                                        <a href="#">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#booking">
                                             <div class="content-overlay"></div>
                                             <img class="content-image" src="./assets/card-2.jpg">
                                             <div class="content-details fadeIn-bottom">
@@ -211,16 +211,42 @@
     <div class="modal fade" id="booking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-heading">
+                    <h3 class="text-center py-3">Booking</h3>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <form action="#">
+                        <div class="input mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Your Name*">
+                        </div>
+                        <div class="input mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Slot</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="input mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Class</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="input mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Seat</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="btn-booking text-center mt-5 mb-3">
+                            <button class="btn">Book Now</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
