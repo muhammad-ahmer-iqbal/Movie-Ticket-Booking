@@ -49,8 +49,11 @@
                             <input type="password" class="form-control" placeholder="Password*">
                         </div>
 
-                        <div class="login-btn mb-3 text-center">
+                        <div class="login-btn text-center">
                             <button type="submit" class="btn">Login</button>
+                        </div>
+                        <div class="an-account pb-4 text-center">
+                            <a href="register.php">Create an account?</a>
                         </div>
                     </form>
                 </div>

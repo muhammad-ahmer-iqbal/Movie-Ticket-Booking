@@ -304,9 +304,21 @@ textarea{
     border: none !important;
     border: 1px solid black !important;
 }
-/* .movie-input{
+.dashboard-card{
     padding: 10px;
-} */
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.dashboard-cards{
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
 @media (max-width: 420px) {
     .sidebar li .tooltip {
