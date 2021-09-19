@@ -134,9 +134,8 @@
                                     </div>
                                     <hr>
                                     <div class="card-btn">
-                                        <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
-                                        <a href="#" class="btn btn-outline-secondary">Details</a>
-                                        <a href="#" class="btn btn-outline-danger">Delete</a>
+                                        <a href="movie-form.php" class="btn btn-outline-success">Create</a>
+                                        <a href="d-movie.php" class="btn btn-outline-secondary">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -156,9 +155,8 @@
                                     </div>
                                     <hr>
                                     <div class="card-btn">
-                                        <a href="#" class="btn btn-outline-success">Edit</a>
+                                        <a href="#" class="btn btn-outline-success">Create</a>
                                         <a href="#" class="btn btn-outline-secondary">Details</a>
-                                        <a href="#" class="btn btn-outline-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>
@@ -178,9 +176,8 @@
                                     </div>
                                     <hr>
                                     <div class="card-btn">
-                                        <a href="#" class="btn btn-outline-success">Edit</a>
+                                        <a href="#" class="btn btn-outline-success">Create</a>
                                         <a href="#" class="btn btn-outline-secondary">Details</a>
-                                        <a href="#" class="btn btn-outline-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>
