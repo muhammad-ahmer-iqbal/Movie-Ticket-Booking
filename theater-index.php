@@ -118,71 +118,96 @@
     </section>
     <br>
     <section class="home-section-1">
+        <div class="heading">
+            <h1 class="display-3 text-center">Theaters</h1>
+        </div>
         <div class="container">
             <div class="card mb-3">
                 <div class="row ml-5">
-                    <div class="col-lg-4">
-                        <div class="dashboard-card">
-                            <div class="row">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="assets/clapperboard.svg" width="100%" alt="Card">
+                    
+                    <?php
+                        $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+        
+                        $query = "SELECT * FROM theater";
+                
+                        $result = mysqli_query($conn, $query);
+                
+                        while($row = mysqli_fetch_array($result)){
+                            echo '<div class="col-lg-4">
+                                    <div class="dashboard-cards">
+                                        <div class="cards">
+                                            <div class="cards-heading">
+                                                <h3 class="text-center">' . $row['theater_name'] . '</h3>
+                                            </div>
+                                            <div class="cards-img">
+                                                <img src="' . $row['theater_image'] . '" width="100%" alt="poster">
+                                            </div>
+                                            <div class="card-btn my-3 text-center">
+                                                <a href="movie-form.php?editId=' . $row['theater_id'] . '" class="btn btn-outline-success">Edit</a>
+                                                <a href="#" class="btn btn-outline-secondary">Details</a>
+                                                <a href="#" class="btn btn-outline-danger">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>';
+                        }
+                
+                        mysqli_close($conn);
+                    ?>
+
+                    <!-- <div class="col-lg-4">
+                        <div class="dashboard-cards">
+                            <div class="cards">
+                                <div class="cards-heading">
+                                    <h3 class="text-center">Tom And Jerry</h3>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-heading">
-                                        <h1>Moives</h1>
-                                        <h4>25</h4>
-                                    </div>
-                                    <hr>
-                                    <div class="card-btn">
-                                        <a href="movie-form.php" class="btn btn-outline-success">Create</a>
-                                        <a href="d-movie.php" class="btn btn-outline-secondary">Details</a>
-                                    </div>
+                                <div class="cards-img">
+                                    <img src="assets/card-1.jpg" width="100%" alt="poster">
+                                </div>
+                                <div class="card-btn my-3 text-center">
+                                    <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
+                                    <a href="#" class="btn btn-outline-secondary">Details</a>
+                                    <a href="#" class="btn btn-outline-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="dashboard-card">
-                            <div class="row">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="assets/theater.svg" width="100%" alt="Card">
+                        <div class="dashboard-cards">
+                            <div class="cards">
+                                <div class="cards-heading">
+                                    <h3 class="text-center">Tom And Jerry</h3>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-heading">
-                                        <h1>Theaters</h1>
-                                        <h4>12</h4>
-                                    </div>
-                                    <hr>
-                                    <div class="card-btn">
-                                        <a href="#" class="btn btn-outline-success">Create</a>
-                                        <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    </div>
+                                <div class="cards-img">
+                                    <img src="assets/card-1.jpg" width="100%" alt="poster">
+                                </div>
+                                <div class="card-btn my-3 text-center">
+                                    <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
+                                    <a href="#" class="btn btn-outline-secondary">Details</a>
+                                    <a href="#" class="btn btn-outline-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-4">
-                        <div class="dashboard-card">
-                            <div class="row">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="assets/chatting.svg" width="100%" alt="Card">
+                        <div class="dashboard-cards">
+                            <div class="cards">
+                                <div class="cards-heading">
+                                    <h3 class="text-center">Tom And Jerry</h3>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-heading">
-                                        <h1>Messages</h1>
-                                        <h4>25</h4>
-                                    </div>
-                                    <hr>
-                                    <div class="card-btn">
-                                        <a href="#" class="btn btn-outline-success">Create</a>
-                                        <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    </div>
+                                <div class="cards-img">
+                                    <img src="assets/card-1.jpg" width="100%" alt="poster">
+                                </div>
+                                <div class="card-btn my-3 text-center">
+                                    <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
+                                    <a href="#" class="btn btn-outline-secondary">Details</a>
+                                    <a href="#" class="btn btn-outline-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
