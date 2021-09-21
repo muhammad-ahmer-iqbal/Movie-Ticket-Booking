@@ -22,6 +22,19 @@
 </head>
 
 <body>
+    <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+        
+        $query1 = "SELECT * FROM slot";
+        $query2 = "SELECT * FROM hall";
+        $query3 = "SELECT * FROM movie";
+
+        $slot = mysqli_query($conn, $query1);
+        $hall = mysqli_query($conn, $query2);
+        $movie = mysqli_query($conn, $query3);
+        
+        mysqli_close($conn);
+    ?>
     <div class="sidebar">
         <div class="logo-details">
             <div class="logo_name">Theater.com</div>
@@ -119,19 +132,65 @@
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">Admin Form</h1>
+            <h1 class="display-3 text-center">Add Show</h1>
         </div>
         <div class="form">
-            <form action="admin-create.php" method="POST">
+            <form action="addShow-create.php" method="POST">
 
                 <div class="mb-3">
-                    <label class="form-label">Admin ID</label>
-                    <input type="text" class="form-control" name="admin_id">
+                    <label class="form-label">Movie</label>
+                    <select class="form-select" name="m_inslot_movieName">
+                        <option selected>Select Movie</option>
+                        <?php
+                            while($row = mysqli_fetch_array($movie)){
+                                echo '<option value="' . $row['movie_id'] . '">' . $row['movie_name'] . '</option>';
+                            }
+                        ?>
+                    </select>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Slot</label>
+                            <select class="form-select" name="m_inslot_slotId">
+                                <option selected>Select Slot</option>
+                                <?php
+                                    while($row = mysqli_fetch_array($slot)){
+                                        echo '<option value="' . $row['slot_id'] . '">' . $row['slot_timings'] . '</option>';
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Hall</label>
+                            <select class="form-select" name="m_inslot_hallNo">
+                                <option selected>Select Hall</option>
+                                <?php
+                                    while($row = mysqli_fetch_array($hall)){
+                                        echo '<option value="' . $row['hall_id'] . '">' . $row['hall_no'] . '</option>';
+                                    }
+                                ?>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="admin_password">
+                    <label class="form-label">Day</label>
+                    <select class="form-select" name="m_inslot_day">
+                        <option selected>Select Day</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
                 </div>
 
                 <div class="d-grid gap-2 mt-4">

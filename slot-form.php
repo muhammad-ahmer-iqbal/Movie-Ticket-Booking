@@ -22,6 +22,15 @@
 </head>
 
 <body>
+    <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+        
+        $query = "SELECT * FROM theater";
+
+        $theater = mysqli_query($conn, $query);
+
+        mysqli_close($conn);
+    ?>
     <div class="sidebar">
         <div class="logo-details">
             <div class="logo_name">Theater.com</div>
@@ -119,107 +128,45 @@
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">Movie Form</h1>
+            <h1 class="display-3 text-center">Add Slot</h1>
         </div>
         <div class="form">
             <form action="#">
 
+                <div class="mb-3">
+                    <label class="form-label">Theater</label>
+                    <select class="form-select" name="slot_theaterName">
+                        <option selected>Select Theater</option>
+                        <?php
+                            while($row = mysqli_fetch_array($theater)){
+                                echo '<option value="' . $row['theater_id'] . '">' . $row['theater_name'] . '</option>';
+                            }
+                        ?>
+                    </select>
+                </div>
+                
                 <div class="row">
                     <div class="col-md-6">
 
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Movie Name*">
+                            <label class="form-label">Timing</label>
+                            <input type="text" class="form-control" name="slot_timings" placeholder="from - to (5 - 7)">
                         </div>
 
                     </div>
                     <div class="col-md-6">
 
                         <div class="mb-3">
-                            <select class="form-select">
-                                <option selected>Select Genre*</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <label class="form-label">Shift</label>
+                            <select class="form-select" name="slot_shift">
+                                <option selected>Select Shift</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Night">Night</option>
                             </select>
                         </div>
 
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <select class="form-select">
-                                <option selected>Select Country*</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <select class="form-select">
-                                <option selected>Select Language*</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Writer Name*">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Director Name*">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Trailer*">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Theater Name*">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Release Date*</label>
-                    <input type="date" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Movie Poster*</label>
-                    <input class="form-control form-control-sm" type="file">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Description*</label>
-                    <textarea class="form-control" rows="10"></textarea>
                 </div>
 
                 <div class="d-grid gap-2 mt-4">
