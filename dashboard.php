@@ -25,23 +25,17 @@
     <?php
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
-        $query1 = "SELECT COUNT(*) as movie FROM movie";
-        $query2 = "SELECT COUNT(*) as message FROM contact_us";
-        $query3 = "SELECT COUNT(*) as theater FROM theater";
+        $query1 = "SELECT * FROM movie";
+        $query2 = "SELECT * FROM contact_us";
+        $query3 = "SELECT * FROM theater";
 
         $movie = mysqli_query($conn, $query1);
         $message = mysqli_query($conn, $query2);
         $theater = mysqli_query($conn, $query3);
 
-        // while($row1 = mysqli_fetch_array($movie)){
-            $movieCount = $row1['movie'];
-        // }
-        // while($row2 = mysqli_fetch_assoc($message)){
-            $messageCount = $row1['message'];
-        // }
-        // while($row3 = mysqli_fetch_assoc($theater)){
-            $theaterCount = $row1['theater'];
-        // }
+        $movieCount = mysqli_num_rows($movie);
+        $theaterCount = mysqli_num_rows($theater);
+        $messageCount = mysqli_num_rows($message);
         
         mysqli_close($conn);
     ?>
@@ -153,14 +147,9 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Moives</h1>
-<<<<<<< HEAD
-                                        <h4>25</h4>
-=======
                                         <?php
-                                            echo '<h4>' . $movie .'</h4>';
+                                            echo '<h4>' . $movieCount .'</h4>';
                                         ?>
-                                        <!-- <h4>25</h4> -->
->>>>>>> 22542e6401b78a952f35f6e22e8424df66d42c7c
                                     </div>
                                     <hr>
                                     <div class="card-btn">
@@ -181,11 +170,9 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Theaters</h1>
-<<<<<<< HEAD
-                                        <h4>25</h4>
-=======
-                                        <h4>12</h4>
->>>>>>> 22542e6401b78a952f35f6e22e8424df66d42c7c
+                                        <?php
+                                            echo '<h4>' . $theaterCount .'</h4>';
+                                        ?>
                                     </div>
                                     <hr>
                                     <div class="card-btn">
@@ -206,7 +193,9 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Messages</h1>
-                                        <h4>25</h4>
+                                        <?php
+                                            echo '<h4>' . $messageCount .'</h4>';
+                                        ?>
                                     </div>
                                     <hr>
                                     <div class="card-btn">
