@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-4 mt-3">
                     <div class="text">
-                        <h6 class="text-light"><span id="date"></span> <span id="time">7:40 PM</span></h6>
+                        <h6 class="text-light"><span id="date"></span> <span id="time"></span></h6>
                     </div>
                 </div>
                 <div class="col-4 mt-3">
@@ -220,6 +220,11 @@
         var month = d.getMonth();
         var year = d.getFullYear();
         document.getElementById("date").innerText = `${day}-${month+1}-${year}`;
+
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        var second = d.getSeconds();
+        document.getElementById("time").innerText = `${hour}:${minute}:${second}`
 
         closeBtn.addEventListener("click", () => {
             sidebar.classList.toggle("open");
