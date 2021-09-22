@@ -24,6 +24,27 @@
 <body>
     <?php
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+<<<<<<< HEAD
+=======
+        
+        $query1 = "SELECT COUNT(*) as movie FROM movie";
+        $query2 = "SELECT COUNT(*) as message FROM contact_us";
+        $query3 = "SELECT COUNT(*) as theater FROM theater";
+
+        $movie = mysqli_query($conn, $query1);
+        $message = mysqli_query($conn, $query2);
+        $theater = mysqli_query($conn, $query3);
+
+        // while($row1 = mysqli_fetch_array($movie)){
+            $movieCount = $row1['movie'];
+        // }
+        // while($row2 = mysqli_fetch_assoc($message)){
+            $messageCount = $row1['message'];
+        // }
+        // while($row3 = mysqli_fetch_assoc($theater)){
+            $theaterCount = $row1['theater'];
+        // }
+>>>>>>> 22542e6401b78a952f35f6e22e8424df66d42c7c
 
         mysqli_close($conn);
     ?>
@@ -135,7 +156,14 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Moives</h1>
+<<<<<<< HEAD
                                         <h4>25</h4>
+=======
+                                        <?php
+                                            echo '<h4>' . $movie .'</h4>';
+                                        ?>
+                                        <!-- <h4>25</h4> -->
+>>>>>>> 22542e6401b78a952f35f6e22e8424df66d42c7c
                                     </div>
                                     <hr>
                                     <div class="card-btn">
@@ -156,7 +184,11 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Theaters</h1>
+<<<<<<< HEAD
                                         <h4>25</h4>
+=======
+                                        <h4>12</h4>
+>>>>>>> 22542e6401b78a952f35f6e22e8424df66d42c7c
                                     </div>
                                     <hr>
                                     <div class="card-btn">
