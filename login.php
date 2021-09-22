@@ -37,23 +37,23 @@
             <div class="login-body">
                 <div class="heading text-center">
                     <a href="index.php">
-                        <img class="my-5" src="assets/Logo.png" width="20%" alt="Logo">
+                        <img class="my-5" src="assets/Logo0.png" width="20%" alt="Logo">
                     </a>
                 </div>
                 <div class="inputs">
-                    <form action="#">
+                    <form action="login.php" method="POST">
                         <div class="input mb-4">
-                            <input type="text" class="form-control" placeholder="Username*">
+                            <input type="text" class="form-control" placeholder="UserID">
                         </div>
                         <div class="input mb-5">
-                            <input type="password" class="form-control" placeholder="Password*">
+                            <input type="password" class="form-control" placeholder="Password">
                         </div>
 
                         <div class="login-btn text-center">
                             <button type="submit" class="btn">Login</button>
                         </div>
                         <div class="an-account pb-4 text-center">
-                            <a href="register.php">Create an account?</a>
+                            <a href="signup-form.php">Create an account?</a>
                         </div>
                     </form>
                 </div>

@@ -22,32 +22,9 @@
 </head>
 
 <body>
-    <?php
-        $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
-        
-        $query1 = "SELECT COUNT(*) as movie FROM movie";
-        $query2 = "SELECT COUNT(*) as message FROM contact_us";
-        $query3 = "SELECT COUNT(*) as theater FROM theater";
-
-        $movie = mysqli_query($conn, $query1);
-        $message = mysqli_query($conn, $query2);
-        $theater = mysqli_query($conn, $query3);
-
-        // while($row1 = mysqli_fetch_array($movie)){
-            $movieCount = $row1['movie'];
-        // }
-        // while($row2 = mysqli_fetch_assoc($message)){
-            $messageCount = $row1['message'];
-        // }
-        // while($row3 = mysqli_fetch_assoc($theater)){
-            $theaterCount = $row1['theater'];
-        // }
-
-        mysqli_close($conn);
-    ?>
     <div class="sidebar">
         <div class="logo-details">
-            <div class="logo_name ">Theater.com</div>
+            <div class="logo_name">Theater.com</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -61,16 +38,16 @@
             <li>
                 <a href="d-movie.php">
                     <i class='bx bx-movie'></i>
-                    <span class="links_name">Movies</span>
+                    <span class="links_name">Movie</span>
                 </a>
-                <span class="tooltip">Movies</span>
+                <span class="tooltip">Movie</span>
             </li>
             <li>
                 <a href="d-theater.php">
                     <i class='bx bx-film'></i>
                     <span class="links_name">Theaters</span>
                 </a>
-                <span class="tooltip">Theaters</span>
+                <span class="tooltip">Theater</span>
             </li>
             <li>
                 <a href="#">
@@ -141,76 +118,72 @@
     </section>
     <br>
     <section class="home-section-1">
-        <div class="container">
-            <div class="card mb-3">
-                <div class="row ml-5">
-                    <div class="col-lg-4">
-                        <div class="dashboard-card">
-                            <div class="row">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="assets/clapperboard.svg" width="100%" alt="Card">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-heading">
-                                        <h1>Moives</h1>
-                                        <?php
-                                            echo '<h4>' . $movie .'</h4>';
-                                        ?>
-                                        <!-- <h4>25</h4> -->
-                                    </div>
-                                    <hr>
-                                    <div class="card-btn">
-                                        <a href="movie-form.php" class="btn btn-outline-success">Create</a>
-                                        <a href="d-movie.php" class="btn btn-outline-secondary">Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="heading">
+            <h1 class="display-3 text-center">Add Theater</h1>
+        </div>
+        <div class="form">
+            <form action="theater-create.php" method="POST" enctype="multipart/form-data">
+            
+                <div class="mb-3">
+                    <label class="form-label">Theater Name</label>
+                    <input type="text" class="form-control" name="theater_name">
+                </div>
 
-                    <div class="col-lg-4">
-                        <div class="dashboard-card">
-                            <div class="row">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="assets/theater.svg" width="100%" alt="Card">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-heading">
-                                        <h1>Theaters</h1>
-                                        <h4>12</h4>
-                                    </div>
-                                    <hr>
-                                    <div class="card-btn">
-                                        <a href="#" class="btn btn-outline-success">Create</a>
-                                        <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Place</label>
+                            <input type="text" class="form-control" name="theater_place">
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4">
-                        <div class="dashboard-card">
-                            <div class="row">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="assets/chatting.svg" width="100%" alt="Card">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-heading">
-                                        <h1>Messages</h1>
-                                        <h4>25</h4>
-                                    </div>
-                                    <hr>
-                                    <div class="card-btn">
-                                        <a href="#" class="btn btn-outline-success">Create</a>
-                                        <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Owner</label>
+                            <input type="text" class="form-control" name="theater_owner">
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Contact Number</label>
+                            <input type="number" class="form-control" name="theater_contactNo">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="theater_email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" name="theater_address">
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Image</label>
+                            <input type="file" class="form-control form-control-sm" name="theater_image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button class="btn btn-outline-dark" type="submit">Submit</button>
+                </div>
+                <div class="d-grid gap-2 mt-2">
+                    <button class="btn btn-outline-danger col-sm-6" type="reset">Reset</button>
+                </div>
+
+            </form>
         </div>
     </section>
     <script>
