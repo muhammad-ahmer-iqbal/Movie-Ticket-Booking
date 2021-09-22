@@ -24,8 +24,6 @@
 <body>
     <?php
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
-<<<<<<< HEAD
-=======
         
         $query1 = "SELECT COUNT(*) as movie FROM movie";
         $query2 = "SELECT COUNT(*) as message FROM contact_us";
@@ -44,8 +42,7 @@
         // while($row3 = mysqli_fetch_assoc($theater)){
             $theaterCount = $row1['theater'];
         // }
->>>>>>> 22542e6401b78a952f35f6e22e8424df66d42c7c
-
+        
         mysqli_close($conn);
     ?>
     <div class="sidebar">
