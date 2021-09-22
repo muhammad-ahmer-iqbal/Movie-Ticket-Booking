@@ -22,6 +22,9 @@
 </head>
 
 <body>
+    <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'company');
+    ?>
     <div class="sidebar">
         <div class="logo-details">
             <div class="logo_name ">Theater.com</div>
