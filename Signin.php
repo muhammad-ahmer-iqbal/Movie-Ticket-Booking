@@ -37,7 +37,7 @@
             <div class="login-body">
                 <div class="heading text-center">
                     <a href="index.php">
-                        <img class="my-5" src="assets/Logo.png" width="20%" alt="Logo">
+                        <img class="my-5" src="assets/Logo0.png" width="20%" alt="Logo">
                     </a>
                 </div>
                 <div class="inputs">
