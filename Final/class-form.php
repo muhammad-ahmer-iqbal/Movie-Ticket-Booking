@@ -9,8 +9,14 @@
 </head>
 
 <body>
-    <?php include 'reuseable code\dashboard vertical nav.html'?>
-    <?php include 'reuseable code\dashboard header.html'?>
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
+    ?>
     <br>
     <section class="home-section-1">
         <div class="heading">
@@ -39,7 +45,8 @@
         <div class="form">
             <?php
                 if(@$theater != null){
-                    echo '<form action="class-edit.php" method="POST">';
+                    echo    '<form action="class-edit.php" method="POST">
+                            <input type="hidden" name="class_id"/>';
                 }
                 else{
                     echo '<form action="class-create.php" method="POST">';
@@ -69,16 +76,25 @@
             </form>
         </div>
     </section>
+
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
 <?php
     if(@$editId != null){
         echo '  <script>
                     $(document).ready(function(){
+                        $("[name=class_id]").val("'.$editId.'");
                         $("[name=class_name]").val("'.$name.'");
                         $("[name=class_price]").val("'.$price.'");
                     })
                 </script>';
     }
+
+    include 'reuseable code\dashboard script.html';
 ?>
-<?php include 'reuseable code\dashboard.html'?>
 </html>

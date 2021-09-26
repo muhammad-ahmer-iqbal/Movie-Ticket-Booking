@@ -9,8 +9,12 @@
 
 <body>
     <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
         include 'reuseable code\dashboard vertical nav.html';
-        include 'reuseable code\dashboard header.html';
+        include 'reuseable code\dashboard header.php';
     ?>
     <br>
     <section class="home-section-1">
@@ -49,10 +53,12 @@
                             $query = "SELECT * FROM class";
                     
                             $result = mysqli_query($conn, $query);
+
+                            $serial = 1;
                     
                             while($row = mysqli_fetch_array($result)){
                                 echo    '<tr>
-                                            <th scope="row">'.$row['class_id'].'</th>
+                                            <th scope="row">'.$serial.'</th>
                                             <td>'.$row['class_name'].'</td>
                                             <td>'.$row['class_price'].'</td>
                                             <td>
@@ -61,6 +67,7 @@
                                                 <a href="data-delete.php?classDelete='.$row['class_id'].'" class="btn btn-outline-danger" id="'.$row['class_id'].'" style="display: none;">Confirm Delete</a>
                                             </td>
                                         </tr>';
+                                $serial++;
                             }
                     
                             mysqli_close($conn);
@@ -69,6 +76,13 @@
             </table>
         </div>
     </section>
+    
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
-<?php include 'reuseable code\dashboard.html'?>
+<?php include 'reuseable code\dashboard script.html'?>
 </html>

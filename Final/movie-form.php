@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <title> Responsive Sidebar Menu | CodingLab </title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- bootstrap 5 Start -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- bootstrap 5 End -->
-
-    <link rel="stylesheet" href="stylesheet\dashboard.css">
-    <script src="script/dashboard.js"></script>
+    <title>Create Movie | Theater.com</title>
+    <?php include 'reuseable code\dashboard CDNs.html';?>
 
 </head>
 
 <body>
     <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
         $query1 = "SELECT * FROM genre";
@@ -37,114 +27,62 @@
         $theater = mysqli_query($conn, $query4);
 
         mysqli_close($conn);
+        
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
     ?>
-    <div class="sidebar">
-        <div class="logo-details">
-            <div class="logo_name">Theater.com</div>
-            <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li>
-                <a href="dashboard.php">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="d-movie.php">
-                    <i class='bx bx-movie'></i>
-                    <span class="links_name">Movie</span>
-                </a>
-                <span class="tooltip">Movie</span>
-            </li>
-            <li>
-                <a href="d-theater.php">
-                    <i class='bx bx-film'></i>
-                    <span class="links_name">Theaters</span>
-                </a>
-                <span class="tooltip">Theater</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-book'></i>
-                    <span class="links_name">Bookings</span>
-                </a>
-                <span class="tooltip">Bookings</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-user'></i>
-                    <span class="links_name">Users</span>
-                </a>
-                <span class="tooltip">Users</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-user-circle'></i>
-                    <span class="links_name">Admins</span>
-                </a>
-                <span class="tooltip">Admins</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-home'></i>
-                    <span class="links_name">Hall</span>
-                </a>
-                <span class="tooltip">Hall</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
-                    <span class="links_name">Setting</span>
-                </a>
-                <span class="tooltip">Setting</span>
-            </li>
-        </ul>
-    </div>
-    <section class="home-section">
-        <div class="text w-100">
-            <div class="row">
-                <div class="col-4 align-self-center">
-                    <div class="text">
-                        <h5 class="text-light">Date</h5>
-                        <h5 class="text-light">Time</h5>
-                    </div>
-                </div>
-                <div class="col-4 align-self-center">
-                    <div class="text">
-                        <h1 class="text-center text-light">THEATER.COM</h1>
-                    </div>
-                </div>
-                <div class="col-4 align-self-center">
-                    <div class="text-end">
-                        <div class="dropdown">
-                            <button class="btn text-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="assets/user.png" alt="profile">
-                                John Doe
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">Movie Form</h1>
+            <?php
+                if(@$_GET['editId'] == true){
+                    echo '<h1 class="display-3 text-center">Edit Movie</h1>';
+
+                    $editId = $_GET['editId'];
+
+                    $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+                    $query = "SELECT * FROM movie WHERE movie_id = '$editId'";
+
+                    $result = mysqli_query($conn, $query);
+
+                    while($row = mysqli_fetch_array($result)){
+                        $name = $row['movie_name'];
+                        $genre = $row['movie_genre'];
+                        $country = $row['movie_country'];
+                        $language = $row['movie_language'];
+                        $writer = $row['movie_writer'];
+                        $director = $row['movie_director'];
+                        $description = $row['movie_description'];
+                        $trailer = $row['movie_trailer'];
+                        $release = $row['movie_releaseDate'];
+                        $movietheater = $row['movie_theaterName '];
+                        $poster = $row['movie_poster'];
+                    }
+
+                    mysqli_close($conn);
+                }
+                else{
+                    echo '<h1 class="display-3 text-center">Add Movie</h1>';
+                }
+                
+            ?>
         </div>
         <div class="form">
-            <form action="movie-create.php" method="POST" enctype="multipart/form-data">
+            <?php
+                if(@$editId != null){
+                    echo    '<form action="movie-edit.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="movie_id"/>';
+                }
+                else{
+                    echo '<form action="movie-create.php" method="POST" enctype="multipart/form-data">';
+                }
+            ?>
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Movie Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="movie_name">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -152,8 +90,13 @@
                         <div class="mb-3">
                             <label class="form-label">Genre</label>
                             <select class="form-select" name="movie_genre">
-                                <option selected>Select Genre</option>
                                 <?php
+                                    if(@$editId != null){
+                                        echo '<option>Select Genre</option>';
+                                    }
+                                    else{
+                                        echo '<option selected>Select Genre</option>';
+                                    }
                                     while($row = mysqli_fetch_array($genre)){
                                         echo '<option value="' . $row['genre_id'] . '">' . $row['genre_name'] . '</option>';
                                     }
@@ -169,8 +112,13 @@
                         <div class="mb-3">
                             <label class="form-label">Country</label>
                             <select class="form-select" name="movie_country">
-                                <option selected>Select Country</option>
                                 <?php
+                                    if(@$editId != null){
+                                        echo '<option>Select Country</option>';
+                                    }
+                                    else{
+                                        echo '<option selected>Select Country</option>';
+                                    }
                                     while($row = mysqli_fetch_array($country)){
                                         echo '<option value="' . $row['country_id'] . '">' . $row['country_name'] . '</option>';
                                     }
@@ -182,8 +130,13 @@
                         <div class="mb-3">
                             <label class="form-label">Language</label>
                             <select class="form-select" name="movie_language">
-                                <option selected>Select Language</option>
                                 <?php
+                                    if(@$editId != null){
+                                        echo '<option>Select Language</option>';
+                                    }
+                                    else{
+                                        echo '<option selected>Select Language</option>';
+                                    }
                                     while($row = mysqli_fetch_array($language)){
                                         echo '<option value="' . $row['language_id'] . '">' . $row['language_name'] . '</option>';
                                     }
@@ -198,14 +151,14 @@
 
                         <div class="mb-3">
                             <label class="form-label">Writer</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="movie_writer">
                         </div>
 
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Director</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="movie_director">
                         </div>
                     </div>
                 </div>
@@ -214,15 +167,20 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Trailer</label>
-                            <input type="url" class="form-control" placeholder="Enter URL">
+                            <input type="url" class="form-control" placeholder="Enter URL" name="movie_trailer">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Theater Name</label>
                             <select class="form-select" name="movie_theaterName">
-                                <option selected>Select Theater</option>
                                 <?php
+                                    if(@$editId != null){
+                                        echo '<option>Select Theater</option>';
+                                    }
+                                    else{
+                                        echo '<option selected>Select Theater</option>';
+                                    }
                                     while($row = mysqli_fetch_array($theater)){
                                         echo '<option value="' . $row['theater_id'] . '">' . $row['theater_name'] . '</option>';
                                     }
@@ -234,29 +192,65 @@
 
                 <div class="mb-3">
                     <label class="form-label">Release Date</label>
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" name="movie_releaseDate">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Movie Poster</label>
-                    <input type="file" class="form-control form-control-sm">
+                    <br>
+                    <?php
+                        if(@$editId != null){
+                            echo '<img src="'.$poster.'" alt="theater img" height=100px class="img-responsive">';
+                        }
+                    ?>
+                    <input type="file" class="form-control form-control-sm" name="movie_poser">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Description</label>
-                    <textarea class="form-control" rows="10"></textarea>
+                    <textarea class="form-control" rows="10" name="movie_description"></textarea>
                 </div>
 
                 <div class="d-grid gap-2 mt-4">
-                    <button class="btn btn-outline-dark" type="submit">Submit</button>
+                    <div class="row">
+                        <a href="movie-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
+                        <button class="btn btn-dark col-sm-6" type="button">Submit</button>
+                    </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
-                    <button class="btn btn-outline-danger col-sm-6" type="reset">Reset</button>
+                    <button class="btn btn-outline-danger" type="reset">Reset</button>
                 </div>
 
             </form>
         </div>
     </section>
+    
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
-
+<?php
+    if(@$editId != null){
+        echo '  <script>
+                    $(document).ready(function(){
+                        $("[name=movie_id]").val("'.$editId.'");
+                        $("[name=movie_name]").val("'.$name.'");
+                        $("[value='.$genre.']").attr("selected", true);
+                        $("[value='.$country.']").attr("selected", true);
+                        $("[value='.$language.']").attr("selected", true);
+                        $("[name=movie_writer]").val("'.$writer.'");
+                        $("[name=movie_director]").val("'.$director.'");
+                        $("[name=movie_description]").val("'.$description.'");
+                        $("[name=movie_trailer]").val("'.$trailer.'");
+                        $("[name=movie_releaseDate]").val("'.$release.'");
+                        $("[value='.$theater.']").attr("selected", true);
+                    })
+                </script>';
+    }
+    
+    include 'reuseable code\dashboard script.html';
+?>
 </html>

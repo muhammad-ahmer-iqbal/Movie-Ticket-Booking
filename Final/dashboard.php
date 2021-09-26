@@ -11,6 +11,10 @@
 
 <body>
     <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
         $query1 = "SELECT * FROM movie";
@@ -28,12 +32,26 @@
         mysqli_close($conn);
         
         include 'reuseable code\dashboard vertical nav.html';
-        include 'reuseable code\dashboard header.html';
+        include 'reuseable code\dashboard header.php';
     ?>
     
     <br>
     <section class="home-section-1">
         <div class="container">
+            <?php 
+                if(@$_GET['addMessage'] == true)
+                {
+                    echo "<div class='alert alert-success my-3' role='alert'>".$_GET['addMessage']."</div>";
+                }
+                if(@$_GET['delMessage'] == true)
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['delMessage']."</div>";
+                }
+                if(@$_GET['editMessage'] == true)
+                {
+                    echo "<div class='alert alert-info my-3' role='alert'>".$_GET['editMessage']."</div>";
+                }
+            ?>
             <div class="card mb-3">
                 <div class="row ml-5">
                     <div class="col-lg-4">
@@ -107,6 +125,13 @@
             </div>
         </div>
     </section>
+
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
-<?php include 'reuseable code\dashboard.html'?>
+<?php include 'reuseable code\dashboard script.html';?>
 </html>

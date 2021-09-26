@@ -8,8 +8,14 @@
 </head>
 
 <body>
-    <?php include 'reuseable code\dashboard vertical nav.html'?>
-    <?php include 'reuseable code\dashboard header.html'?>
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
+    ?>
     <br>
     <section class="home-section-1">
         <div class="heading">
@@ -46,10 +52,12 @@
                             $query = "SELECT * FROM language";
                     
                             $result = mysqli_query($conn, $query);
+
+                            $serial = 1;
                     
                             while($row = mysqli_fetch_array($result)){
                                 echo    '<tr>
-                                            <th scope="row">'.$row['language_id'].'</th>
+                                            <th scope="row">'.$serial.'</th>
                                             <td>'.$row['language_name'].'</td>
                                             <td>
                                                 <a href="language-form.php?editId='.$row['language_id'].'" class="btn btn-outline-success">Edit</a>
@@ -57,6 +65,7 @@
                                                 <a href="data-delete.php?languageDelete='.$row['language_id'].'" class="btn btn-outline-danger" id="'.$row['language_id'].'" style="display: none;">Confirm Delete</a>
                                             </td>
                                         </tr>';
+                                $serial++;
                             }
                     
                             mysqli_close($conn);
@@ -65,6 +74,13 @@
             </table>
         </div>
     </section>
+
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
-<?php include 'reuseable code\dashboard.html'?>
+<?php include 'reuseable code\dashboard script.html'?>
 </html>

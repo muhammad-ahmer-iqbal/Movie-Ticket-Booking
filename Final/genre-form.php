@@ -8,8 +8,14 @@
 </head>
 
 <body>
-    <?php include 'reuseable code\dashboard vertical nav.html'?>
-    <?php include 'reuseable code\dashboard header.html'?>
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
+    ?>
     <br>
     <section class="home-section-1">
         <div class="heading">
@@ -37,7 +43,8 @@
         <div class="form">
             <?php
                 if(@$theater != null){
-                    echo '<form action="genre-edit.php" method="POST">';
+                    echo    '<form action="genre-edit.php" method="POST">
+                            <input type="hidden" name="genre_id"/>';
                 }
                 else{
                     echo '<form action="genre-create.php" method="POST">';
@@ -50,7 +57,10 @@
                 </div>
 
                 <div class="d-grid gap-2 mt-4">
-                    <button class="btn btn-outline-dark" type="button">Submit</button>
+                    <div class="row">
+                        <a href="genre-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
+                        <button class="btn btn-dark col-sm-6" type="button">Submit</button>
+                    </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
                     <button class="btn btn-outline-danger" type="reset">Reset</button>
@@ -59,15 +69,24 @@
             </form>
         </div>
     </section>
+    
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
 <?php
     if(@$editId != null){
         echo '  <script>
                     $(document).ready(function(){
+                        $("[name=genre_id]").val("'.$editId.'");
                         $("[name=genre_name]").val("'.$name.'");
                     })
                 </script>';
     }
+
+    include 'reuseable code\dashboard script.html';
 ?>
-<?php include 'reuseable code\dashboard.html'?>
 </html>

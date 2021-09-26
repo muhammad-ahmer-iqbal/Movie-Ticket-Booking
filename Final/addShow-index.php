@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hall List | Theater.com</title>
+    <title>Show List | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 
@@ -19,7 +19,7 @@
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">Halls</h1>
+            <h1 class="display-3 text-center">Shows</h1>
         </div>
         <div class="container">
             <?php 
@@ -36,14 +36,15 @@
                     echo "<div class='alert alert-info my-3' role='alert'>".$_GET['editMessage']."</div>";
                 }
             ?>
-            <a href="class-form.php" class="btn btn-success btn-md" style="width: 7%; font-weight:600;">Add</a>
+            <a href="addShow-form.php" class="btn btn-success btn-md" style="width: 7%; font-weight:600;">Add</a>
             <table class="table table-hover align-middle">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Hall Number</th>
-                        <th scope="col">Available Seats</th>
-                        <th scope="col">Theater</th>
+                        <th scope="col">Movie Name</th>
+                        <th scope="col">Slot</th>
+                        <th scope="col">Hall No</th>
+                        <th scope="col">Day</th>
                         <th>Options</th>
                     </tr>
                 </thead>
@@ -51,27 +52,38 @@
                     <?php
                             $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
             
-                            $query = "SELECT * FROM hall";
+                            $query = "SELECT * FROM movie_inslot";
                     
                             $result = mysqli_query($conn, $query);
-                            
+
                             $serial = 1;
-                            
+                    
                             while($row = mysqli_fetch_array($result)){
-                                $query1 = "SELECT theater_name FROM theater WHERE theater_id = $row[hall_theaterName]";
+                                $query1 = "SELECT movie_name FROM movie WHERE movie_id = $row[m_inslot_movieName]";
+                                $query2 = "SELECT slot_timings FROM slot WHERE slot_id = $row[m_inslot_slotId]";
+                                $query3 = "SELECT hall_no FROM hall WHERE hall_id = $row[m_inslot_hallNo]";
                                 $result1 = mysqli_query($conn, $query1);
+                                $result2 = mysqli_query($conn, $query2);
+                                $result3 = mysqli_query($conn, $query3);
                                 while($row1 = mysqli_fetch_array($result1)){
-                                    $row['hall_theaterName'] = $row1['theater_name'];
+                                    $row['m_inslot_movieName'] = $row1['movie_name'];
+                                }
+                                while($row2 = mysqli_fetch_array($result2)){
+                                    $row['m_inslot_slotId'] = $row2['slot_timings'];
+                                }
+                                while($row3 = mysqli_fetch_array($result3)){
+                                    $row['m_inslot_hallNo'] = $row3['hall_no'];
                                 }
                                 echo    '<tr>
                                             <th scope="row">'.$serial.'</th>
-                                            <td>'.$row['hall_no'].'</td>
-                                            <td>'.$row['hall_availableSeats'].'</td>
-                                            <td>'.$row['hall_theaterName'].'</td>
+                                            <td>'.$row['m_inslot_movieName'].'</td>
+                                            <td>'.$row['m_inslot_day'].'</td>
+                                            <td>'.$row['m_inslot_slotId'].'</td>
+                                            <td>'.$row['m_inslot_hallNo'].'</td>
                                             <td>
-                                                <a href="hall-form.php?editId='.$row['hall_id'].'" class="btn btn-outline-success">Edit</a>
-                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['hall_id'].')">Delete</button>
-                                                <a href="data-delete.php?hallDelete='.$row['hall_id'].'" class="btn btn-outline-danger" id="'.$row['hall_id'].'" style="display: none;">Confirm Delete</a>
+                                                <a href="addShow-form.php?editId='.$row['m_inslot_id'].'" class="btn btn-outline-success">Edit</a>
+                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['m_inslot_id'].')">Delete</button>
+                                                <a href="data-delete.php?addShowDelete='.$row['m_inslot_id'].'" class="btn btn-outline-danger" id="'.$row['m_inslot_id'].'" style="display: none;">Confirm Delete</a>
                                             </td>
                                         </tr>';
                                 $serial++;
@@ -83,7 +95,6 @@
             </table>
         </div>
     </section>
-    
     <?php
         }
         else{

@@ -4,18 +4,12 @@
 	box-sizing: border-box;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.body {
+.body, .adminBody {
 	width: 100%;
-	background: url("../assets/loginwall.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
-/* .box {
-	width: 30%;
-	margin: 230px auto;
-	height: 100%;
-	background-color: black;
-	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
-} */
+.body{background: url("../assets/loginwall.jpg") no-repeat center center fixed;}
+.adminBody{background: url("../assets/adminwall.jpg") no-repeat center center fixed;}
 a {
 	text-decoration: none;
 }
@@ -345,11 +339,11 @@ input {
 }
 
 .login{
+	margin-top: 10% !important;
 	background-color: white;
 	width: 40%;
 	border-radius: 20px;
-	margin: auto;
-	margin-top: 200px;
+	margin: 0 auto;
 }
 .login-btn button{
 	margin: auto;
@@ -365,11 +359,12 @@ input {
 }
 
 .register{
+	margin-top: 10% !important;
 	background-color: white;
 	width: 40%;
 	border-radius: 20px;
 	margin: auto;
-	margin-top: 150px;
+	vertical-align: middle;
 }
 .register-btn button{
 	margin: auto;
@@ -405,3 +400,53 @@ input {
 	color: white;
 }
 /* Form End */
+
+/* Media Quries */
+
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+    
+	.login{
+		width: 40%;
+	}
+	.login-btn button{
+		width: 30%;
+	}
+	.register{
+		width: 40%;
+	}
+	.register-btn button{
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .login{
+		width: 60%;
+	}
+	.login-btn button{
+		width: 50%;
+	}
+	.register{
+		width: 60%;
+	}
+	.register-btn button{
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .login{
+		width: 80%;
+	}
+	.login-btn button{
+		width: 80%;
+	}
+	.register{
+		width: 90%;
+	}
+	.register-btn button{
+		width: 90%;
+	}
+}
+
+/* Media Quries End */

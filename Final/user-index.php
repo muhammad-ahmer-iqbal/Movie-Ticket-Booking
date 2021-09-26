@@ -3,17 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Slot List | Theater.com</title>
+    <title>User List | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 
 <body>
-    <?php include 'reuseable code\dashboard vertical nav.html'?>
-    <?php include 'reuseable code\dashboard header.html'?>
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
+    ?>
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">Slot</h1>
+            <h1 class="display-3 text-center">User</h1>
         </div>
         <div class="container">
             <?php 
@@ -30,14 +36,15 @@
                     echo "<div class='alert alert-info my-3' role='alert'>".$_GET['editMessage']."</div>";
                 }
             ?>
-            <a href="class-form.php" class="btn btn-success btn-md" style="width: 7%; font-weight:600;">Add</a>
             <table class="table table-hover align-middle">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Shift</th>
-                        <th scope="col">Timing</th>
-                        <th scope="col">Theater</th>
+                        <th scope="col">User ID</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">User Password</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Age</th>
                         <th>Options</th>
                     </tr>
                 </thead>
@@ -45,22 +52,27 @@
                     <?php
                             $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
             
-                            $query = "SELECT * FROM slot";
+                            $query = "SELECT * FROM user";
                     
                             $result = mysqli_query($conn, $query);
+
+                            $serial = 1;
                     
                             while($row = mysqli_fetch_array($result)){
                                 echo    '<tr>
-                                            <th scope="row">'.$row['slot_id'].'</th>
-                                            <td>'.$row['slot_timings'].'</td>
-                                            <td>'.$row['slot_timings'].'</td>
-                                            <td>'.$row['slot_theaterName'].'</td>
+                                            <th scope="row">'.$serial.'</th>
+                                            <td>'.$row['user_id'].'</td>
+                                            <td>'.$row['user_name'].'</td>
+                                            <td>'.$row['user_password'].'</td>
+                                            <td>'.$row['user_contactNo'].'</td>
+                                            <td>'.$row['user_age'].'</td>
                                             <td>
-                                                <a href="class-form.php?editId='.$row['slot_id'].'" class="btn btn-outline-success">Edit</a>
-                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['slot_id'].')">Delete</button>
-                                                <a href="data-delete.php?slotDelete='.$row['slot_id'].'" class="btn btn-outline-danger" id="'.$row['slot_id'].'" style="display: none;">Confirm Delete</a>
+                                                <a href="user-form.php?editId='.$row['user_id'].'" class="btn btn-outline-success">Edit</a>
+                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['user_id'].')">Delete</button>
+                                                <a href="data-delete.php?userDelete='.$row['user_id'].'" class="btn btn-outline-danger" id="'.$row['user_id'].'" style="display: none;">Confirm Delete</a>
                                             </td>
                                         </tr>';
+                                $serial++;
                             }
                     
                             mysqli_close($conn);
@@ -69,6 +81,13 @@
             </table>
         </div>
     </section>
+    
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
-<?php include 'reuseable code\dashboard.html'?>
+<?php include 'reuseable code\dashboard script.html'?>
 </html>

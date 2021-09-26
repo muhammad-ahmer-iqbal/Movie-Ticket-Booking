@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin List | Theater.com</title>
-    <?php include 'reuseable code\dashboard CDNs.html'?>
+    <?php include 'reuseable code\dashboard CDNs.html';?>
 </head>
 
 <body>
-    <?php include 'reuseable code\dashboard vertical nav.html'?>
-    <?php include 'reuseable code\dashboard header.html'?>
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
+    ?>
     <br>
     <section class="home-section-1">
         <div class="heading">
@@ -57,7 +63,7 @@
 
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
-                        <a href="#" class="btn btn-outline-dark col-sm-6">Back</a>
+                        <a href="admin-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
                         <button class="btn btn-dark col-sm-6" type="button">Submit</button>
                     </div>
                 </div>
@@ -68,6 +74,13 @@
             </form>
         </div>
     </section>
+
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
 <?php
     if(@$editId != null){
@@ -79,6 +92,7 @@
                     })
                 </script>';
     }
+
+    include 'reuseable code\dashboard script.html';
 ?>
-<?php include 'reuseable code\dashboard.html'?>
 </html>

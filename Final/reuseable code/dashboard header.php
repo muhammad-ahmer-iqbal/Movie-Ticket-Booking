@@ -15,11 +15,13 @@
                 <div class="text-end">
                     <div class="dropdown">
                         <button class="btn text-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="assets/user.png" alt="profile">
-                            John Doe
+                            <img src="../assets/user.png" alt="profile">
+                            <?php 
+                                echo 'Hello '. $_SESSION['Admin'];
+                            ?>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="overflow: hidden;">
+                            <li><a class="dropdown-item" href="logout.php?logoutAdmin">Logout</a></li>
                         </ul>
                     </div>
                 </div>

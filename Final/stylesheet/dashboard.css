@@ -24,8 +24,29 @@ ol, ul {
 }
 
 .sidebar.open {
+    overflow: scroll;
     width: 250px;
+    
 }
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #11101D; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .sidebar .logo-details {
     height: 120px;
@@ -151,6 +172,12 @@ ol, ul {
 
 .sidebar li a:hover {
     background: white;
+}
+#active{
+    background-color: white;
+}
+#active i, #active span{
+    color: #11101D;
 }
 
 .sidebar li a .links_name {

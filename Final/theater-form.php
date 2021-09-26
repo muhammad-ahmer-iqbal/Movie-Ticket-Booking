@@ -8,8 +8,14 @@
 </head>
 
 <body>
-    <?php include 'reuseable code\dashboard vertical nav.html'?>
-    <?php include 'reuseable code\dashboard header.html'?>
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+
+        include 'reuseable code\dashboard vertical nav.html';
+        include 'reuseable code\dashboard header.php';
+    ?>
     <br>
     <section class="home-section-1">
         <div class="heading">
@@ -42,8 +48,9 @@
         </div>
         <div class="form">
             <?php
-                if(@$theater != null){
-                    echo '<form action="theater-edit.php" method="POST" enctype="multipart/form-data">';
+                if(@$editId != null){
+                    echo    '<form action="theater-edit.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="theater_id"/>';
                 }
                 else{
                     echo '<form action="theater-create.php" method="POST" enctype="multipart/form-data">';
@@ -51,20 +58,20 @@
             ?>
                 <div class="mb-3">
                     <label class="form-label">Theater Name</label>
-                    <input type="text" class="form-control" name="theater_name">
+                    <input type="text" class="form-control" name="theater_name" value="<?php echo @$name ?>">
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Place</label>
-                            <input type="text" class="form-control" name="theater_place">
+                            <input type="text" class="form-control" name="theater_place" value="<?php echo @$place ?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Owner</label>
-                            <input type="text" class="form-control" name="theater_owner">
+                            <input type="text" class="form-control" name="theater_owner" value="<?php echo @$owner ?>">
                         </div>
                     </div>
                 </div>
@@ -73,13 +80,13 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Contact Number</label>
-                            <input type="number" class="form-control" name="theater_contactNo" placeholder="XXXX-XXXXXXX">
+                            <input type="number" class="form-control" name="theater_contactNo" placeholder="XXXX-XXXXXXX" value="<?php echo @$contact ?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" name="theater_email" placeholder="abc@gmail.com">
+                            <input type="email" class="form-control" name="theater_email" placeholder="abc@gmail.com" value="<?php echo @$email ?>">
                         </div>
                     </div>
                 </div>
@@ -89,7 +96,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Address</label>
-                            <input type="text" class="form-control" name="theater_address">
+                            <input type="text" class="form-control" name="theater_address" value="<?php echo @$address ?>">
                         </div>
 
                     </div>
@@ -110,7 +117,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="theater-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <button class="btn btn-dark col-sm-6" type="button">Submit</button>
+                        <input type="submit" name="submit" value="Submit" class="btn btn-dark col-sm-6">
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
@@ -120,20 +127,30 @@
             </form>
         </div>
     </section>
+    
+    <?php
+        }
+        else{
+            header('location:admin-login.php');
+        }
+    ?>
 </body>
 <?php
     if(@$editId != null){
         echo '  <script>
                     $(document).ready(function(){
-                        $("[name=theater_name]").val("'.$name.'");
-                        $("[name=theater_place]").val("'.$place.'");
-                        $("[name=theater_owner]").val("'.$owner.'");
-                        $("[name=theater_contactNo]").val("'.$contact.'");
-                        $("[name=theater_email]").val("'.$email.'");
-                        $("[name=theater_address]").val("'.$email.'");
+                        $("[name=theater_id]").attr("value", "'.$editId.'");
+                        $("[name=theater_name]").attr("value", "'.$name.'");
+                        $("[name=theater_place]").attr("value", "'.$place.'");
+                        $("[name=theater_owner]").attr("value", "'.$owner.'");
+                        $("[name=theater_contactNo]").attr("value", "'.$contact.'");
+                        $("[name=theater_email]").attr("value", "'.$email.'");
+                        $("[name=theater_address]").attr("value", "'.$email.'");
+                        $("[name=theater_image]").attr("value", "'.$image.'");
                     })
                 </script>';
     }
+
+    include 'reuseable code\dashboard script.html';
 ?>
-<?php include 'reuseable code\dashboard.html'?>
 </html>
