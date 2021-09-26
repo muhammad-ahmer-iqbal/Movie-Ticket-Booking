@@ -38,25 +38,28 @@
             <div class="register-body">
                 <div class="heading text-center">
                     <a href="index.php">
-                        <img src="assets/Logo.png" class="my-4" width="20%" alt="Logo">
+                        <img src="assets/Logo0.png" class="my-4" width="20%" alt="Logo">
                     </a>
                 </div>
                 <div class="inputs">
-                    <form action="#">
+                    <form action="user-create.php" method="POST">
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Name*">
+                            <input type="text" class="form-control" placeholder="Enter User ID*" name="user_id">
                         </div>
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Number*">
+                            <input type="text" class="form-control" placeholder="Enter Name*" name="user_name">
                         </div>
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Age*">
+                            <input type="text" class="form-control" placeholder="Enter Number*" name="user_contactNo">
                         </div>
                         <div class="input mb-3">
-                            <input type="password" class="form-control" placeholder="Enter Password*">
+                            <input type="text" class="form-control" placeholder="Enter Age*" name="user_age">
+                        </div>
+                        <div class="input mb-3">
+                            <input type="password" class="form-control" placeholder="Enter Password*" name="user_password">
                         </div>
                         <div class="input mb-5">
-                            <input type="password" class="form-control" placeholder="Enter Confirm-Password*">
+                            <input type="password" class="form-control" placeholder="Enter Confirm-Password*" name="user_confirmPassword">
                         </div>
 
                         <div class="register-btn mb-2 text-center">

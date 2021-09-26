@@ -25,16 +25,14 @@
     <?php
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
-        $query1 = "SELECT * FROM genre";
-        $query2 = "SELECT * FROM country";
-        $query3 = "SELECT * FROM language";
-        $query4 = "SELECT * FROM theater";
+        $query1 = "SELECT * FROM slot";
+        $query2 = "SELECT * FROM hall";
+        $query3 = "SELECT * FROM movie";
 
-        $genre = mysqli_query($conn, $query1);
-        $country = mysqli_query($conn, $query2);
-        $language = mysqli_query($conn, $query3);
-        $theater = mysqli_query($conn, $query4);
-
+        $slot = mysqli_query($conn, $query1);
+        $hall = mysqli_query($conn, $query2);
+        $movie = mysqli_query($conn, $query3);
+        
         mysqli_close($conn);
     ?>
     <div class="sidebar">
@@ -134,123 +132,72 @@
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">Movie Form</h1>
+            <h1 class="display-3 text-center">Add Show</h1>
         </div>
         <div class="form">
-            <form action="movie-create.php" method="POST" enctype="multipart/form-data">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Movie Name</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <label class="form-label">Genre</label>
-                            <select class="form-select" name="movie_genre">
-                                <option selected>Select Genre</option>
-                                <?php
-                                    while($row = mysqli_fetch_array($genre)){
-                                        echo '<option value="' . $row['genre_id'] . '">' . $row['genre_name'] . '</option>';
-                                    }
-                                ?>
-                            </select>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Country</label>
-                            <select class="form-select" name="movie_country">
-                                <option selected>Select Country</option>
-                                <?php
-                                    while($row = mysqli_fetch_array($country)){
-                                        echo '<option value="' . $row['country_id'] . '">' . $row['country_name'] . '</option>';
-                                    }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Language</label>
-                            <select class="form-select" name="movie_language">
-                                <option selected>Select Language</option>
-                                <?php
-                                    while($row = mysqli_fetch_array($language)){
-                                        echo '<option value="' . $row['language_id'] . '">' . $row['language_name'] . '</option>';
-                                    }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="mb-3">
-                            <label class="form-label">Writer</label>
-                            <input type="text" class="form-control">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Director</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Trailer</label>
-                            <input type="url" class="form-control" placeholder="Enter URL">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label class="form-label">Theater Name</label>
-                            <select class="form-select" name="movie_theaterName">
-                                <option selected>Select Theater</option>
-                                <?php
-                                    while($row = mysqli_fetch_array($theater)){
-                                        echo '<option value="' . $row['theater_id'] . '">' . $row['theater_name'] . '</option>';
-                                    }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+            <form action="addShow-create.php" method="POST">
 
                 <div class="mb-3">
-                    <label class="form-label">Release Date</label>
-                    <input type="date" class="form-control">
+                    <label class="form-label">Movie</label>
+                    <select class="form-select" name="m_inslot_movieName">
+                        <option selected>Select Movie</option>
+                        <?php
+                            while($row = mysqli_fetch_array($movie)){
+                                echo '<option value="' . $row['movie_id'] . '">' . $row['movie_name'] . '</option>';
+                            }
+                        ?>
+                    </select>
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Movie Poster</label>
-                    <input type="file" class="form-control form-control-sm">
-                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Slot</label>
+                            <select class="form-select" name="m_inslot_slotId">
+                                <option selected>Select Slot</option>
+                                <?php
+                                    while($row = mysqli_fetch_array($slot)){
+                                        echo '<option value="' . $row['slot_id'] . '">' . $row['slot_timings'] . '</option>';
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Hall</label>
+                            <select class="form-select" name="m_inslot_hallNo">
+                                <option selected>Select Hall</option>
+                                <?php
+                                    while($row = mysqli_fetch_array($hall)){
+                                        echo '<option value="' . $row['hall_id'] . '">' . $row['hall_no'] . '</option>';
+                                    }
+                                ?>
+                            </select>
+                        </div>
 
+                    </div>
+                </div>
+                
                 <div class="mb-3">
-                    <label class="form-label">Description</label>
-                    <textarea class="form-control" rows="10"></textarea>
+                    <label class="form-label">Day</label>
+                    <select class="form-select" name="m_inslot_day">
+                        <option selected>Select Day</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
                 </div>
 
                 <div class="d-grid gap-2 mt-4">
-                    <button class="btn btn-outline-dark" type="submit">Submit</button>
+                    <button class="btn btn-outline-dark" type="button">Submit</button>
                 </div>
                 <div class="d-grid gap-2 mt-2">
-                    <button class="btn btn-outline-danger col-sm-6" type="reset">Reset</button>
+                    <button class="btn btn-outline-danger" type="reset">Reset</button>
                 </div>
 
             </form>

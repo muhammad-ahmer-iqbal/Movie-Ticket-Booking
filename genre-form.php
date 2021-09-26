@@ -24,7 +24,7 @@
 <body>
     <div class="sidebar">
         <div class="logo-details">
-            <div class="logo_name ">Theater.com</div>
+            <div class="logo_name">Theater.com</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -38,16 +38,16 @@
             <li>
                 <a href="d-movie.php">
                     <i class='bx bx-movie'></i>
-                    <span class="links_name">Movies</span>
+                    <span class="links_name">Movie</span>
                 </a>
-                <span class="tooltip">Movies</span>
+                <span class="tooltip">Movie</span>
             </li>
             <li>
                 <a href="d-theater.php">
                     <i class='bx bx-film'></i>
                     <span class="links_name">Theaters</span>
                 </a>
-                <span class="tooltip">Theaters</span>
+                <span class="tooltip">Theater</span>
             </li>
             <li>
                 <a href="#">
@@ -118,64 +118,25 @@
     </section>
     <br>
     <section class="home-section-1">
-        <div class="container">
-            <div class="card mb-3">
-                <div class="row ml-5">
-                    <div class="col-lg-4">
-                        <div class="dashboard-cards">
-                            <div class="cards">
-                                <div class="cards-heading">
-                                    <h3 class="text-center">Tom And Jerry</h3>
-                                </div>
-                                <div class="cards-img">
-                                    <img src="assets/card-1.jpg" width="100%" alt="poster">
-                                </div>
-                                <div class="card-btn my-3 text-center">
-                                    <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
-                                    <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    <a href="#" class="btn btn-outline-danger">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="heading">
+            <h1 class="display-3 text-center">Movie Form</h1>
+        </div>
+        <div class="form">
+            <form action="genre-create.php" method="POST">
 
-                    <div class="col-lg-4">
-                    <div class="dashboard-cards">
-                            <div class="cards">
-                                <div class="cards-heading">
-                                    <h3 class="text-center">Tom And Jerry</h3>
-                                </div>
-                                <div class="cards-img">
-                                    <img src="assets/card-1.jpg" width="100%" alt="poster">
-                                </div>
-                                <div class="card-btn my-3 text-center">
-                                    <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
-                                    <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    <a href="#" class="btn btn-outline-danger">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                    <div class="dashboard-cards">
-                            <div class="cards">
-                                <div class="cards-heading">
-                                    <h3 class="text-center">Tom And Jerry</h3>
-                                </div>
-                                <div class="cards-img">
-                                    <img src="assets/card-1.jpg" width="100%" alt="poster">
-                                </div>
-                                <div class="card-btn my-3 text-center">
-                                    <a href="movie-form.php" class="btn btn-outline-success">Edit</a>
-                                    <a href="#" class="btn btn-outline-secondary">Details</a>
-                                    <a href="#" class="btn btn-outline-danger">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-3">
+                    <label class="form-label">Genre</label>
+                    <input type="text" class="form-control" name="genre_name">
                 </div>
-            </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button class="btn btn-outline-dark" type="button">Submit</button>
+                </div>
+                <div class="d-grid gap-2 mt-2">
+                    <button class="btn btn-outline-danger" type="reset">Reset</button>
+                </div>
+
+            </form>
         </div>
     </section>
     <script>

@@ -90,7 +90,7 @@
                 </h1>
             </div>
             <div class="form">
-                <form action="#">
+                <form action="booking-create.php" method="POST">
                     <div class="row input-group mb-3">
                         <div class="col-md-6">
                             <label for="first-name" class="form-label">First name</label>
