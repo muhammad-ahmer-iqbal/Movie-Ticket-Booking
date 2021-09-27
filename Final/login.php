@@ -5,27 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Now - Ticket.com</title>
-
-    <!-- bootstrap 5 Start -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- bootstrap 5 End -->
-
-    <!-- Fontawesome External Files -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Fontawesome External Files End -->
-
-    <!-- Custom Style Css Start -->
-
-    <link rel="stylesheet" href="stylesheet\style.css">
-
-    <!-- Custom Style Css End -->
-
+    <title>Login to your account | Theater.com</title>
+    <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 
 <body class="body">
@@ -40,17 +21,23 @@
                         <img class="my-5" src="assets/Logo0.png" width="20%" alt="Logo">
                     </a>
                 </div>
+                <?php 
+                    if(@$_GET['Error'] == true)
+                    {
+                        echo "<div class='alert alert-danger mt-3' role='alert'>".$_GET['Error']."</div>";
+                    }
+                ?>
                 <div class="inputs">
                     <form action="login.php" method="POST">
                         <div class="input mb-4">
-                            <input type="text" class="form-control" placeholder="UserID">
+                            <input type="text" class="form-control" placeholder="UserID" name="userID">
                         </div>
                         <div class="input mb-5">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" placeholder="Password" name="userPassword">
                         </div>
 
                         <div class="login-btn text-center">
-                            <button type="submit" class="btn">Login</button>
+                            <button type="submit" class="btn" name="user" value="user-login">Login</button>
                         </div>
                         <div class="an-account pb-4 text-center">
                             <a href="signup-form.php">Create an account?</a>

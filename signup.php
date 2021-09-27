@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="register-btn mb-2 text-center">
-                            <button type="submit" class="btn mb-2">Register</button>
+                            <button type="submit" class="btn mb-2" name="submit" value="submit">Register</button>
                         </div>
                         <div class="an-account pb-5 text-center">
                             <a href="login.php">Already have an account?</a>

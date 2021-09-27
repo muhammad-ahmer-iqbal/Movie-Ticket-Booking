@@ -29,7 +29,7 @@
                 <div class="col-2 align-self-center">
                     <div class="text-end">
                         <div class="dropdown">
-                            <a href="logout.php?logoutAdmin" class="btn btn-logout btn-outline-danger">
+                            <a href="admin-logout.php?logoutAdmin" class="btn btn-logout btn-outline-danger">
                                 Logout
                             </a>
                         </div>

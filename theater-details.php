@@ -112,112 +112,25 @@
     <!-- Index Center Content Start -->
 
     <div class="container mb-5">
-
-        <div class="movie my-5">
-            <div class="heading">
-                <h2>Theaters</h2>
-            </div>
+        <div class="heading my-5">
+            <h1 class="display-1 text-center">
+                Neuplex Theater
+            </h1>
         </div>
-
-        <div class="search-field my-5">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search Theater" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-danger" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
-            </div>
-        </div>
-
-        ccc
-
-        <div class="row mb-5">
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
+        <div class="info-and-location">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="info">
+                        <h1>Information</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore animi voluptatem placeat quisquam obcaecati illo quo doloremque corrupti cupiditate ut? Blanditiis quasi numquam hic commodi velit, repellat fugiat ratione exercitationem dolorum voluptates debitis, aperiam maiores a accusamus delectus expedita nihil adipisci autem itaque culpa magnam. Ad eos ducimus culpa iusto quidem architecto optio quam aut hic temporibus neque, magnam atque nostrum cupiditate perferendis vitae soluta sint unde tempora provident facilis nisi. Accusantium mollitia sunt ullam quae! Nobis consectetur at, nemo ad facilis quibusdam delectus natus accusantium voluptatum impedit ut expedita amet! Repellendus quos et, repellat, ad dolor reiciendis fugiat perferendis facere corrupti quasi libero voluptas perspiciatis accusantium distinctio atque a quas. Odit, praesentium voluptatem? Doloribus libero tenetur porro alias accusamus enim laboriosam quaerat aut beatae dolores, suscipit sequi officiis voluptate non molestiae ad molestias temporibus possimus perspiciatis. Ea deserunt reiciendis assumenda cumque, quis illum sed ipsa impedit odit animi, doloremque error repellendus provident incidunt modi consequuntur fugiat itaque maiores commodi eaque officiis.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mb-5">
-                <div class="content">
-                    <a href="theater-inner-page.php">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="./assets/Theater-1.jpg">
-                        <div class="content-details fadeIn-bottom">
-                            <h1>Neuplex Theater</h1>
-                        </div>
-                    </a>
+                <div class="col-lg-6">
+                    <div class="location">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14489.875971597701!2d67.0897263!3d24.7793893!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6d7ad92553370cc6!2sNueplex%20Cinemas%20DHA!5e0!3m2!1sen!2s!4v1631048904275!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </div>

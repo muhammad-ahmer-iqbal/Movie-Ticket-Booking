@@ -5,27 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Now - Ticket.com</title>
-
-    <!-- bootstrap 5 Start -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- bootstrap 5 End -->
-
-    <!-- Fontawesome External Files -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Fontawesome External Files End -->
-
-    <!-- Custom Style Css Start -->
-
-    <link rel="stylesheet" href="stylesheet\style.css">
-
-    <!-- Custom Style Css End -->
-
+    <title>Create an account | Theater.com</title>
+    <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 
 <body class="body">
@@ -63,7 +44,7 @@
                         </div>
 
                         <div class="register-btn mb-2 text-center">
-                            <button type="submit" class="btn mb-2">Register</button>
+                            <button type="submit" class="btn mb-2" name="submit" value="submit">Register</button>
                         </div>
                         <div class="an-account pb-5 text-center">
                             <a href="login.php">Already have an account?</a>

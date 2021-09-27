@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2021 at 04:14 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: Sep 27, 2021 at 01:03 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `moviebookingsystem`
+-- Database: `movie_booking_system`
 --
 
 -- --------------------------------------------------------
@@ -31,6 +31,13 @@ CREATE TABLE `admin` (
   `admin_id` char(20) NOT NULL,
   `admin_password` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `admin_password`) VALUES
+('admin_ahmer', 'ahmer123');
 
 -- --------------------------------------------------------
 
@@ -61,6 +68,20 @@ CREATE TABLE `class` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE `contact_us` (
+  `contact_id` int(11) NOT NULL,
+  `contact_name` varchar(20) NOT NULL,
+  `contact_email` varchar(20) NOT NULL,
+  `contact_message` varchar(500) NOT NULL,
+  `contact_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `country`
 --
 
@@ -68,6 +89,13 @@ CREATE TABLE `country` (
   `country_id` int(11) NOT NULL,
   `country_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `country`
+--
+
+INSERT INTO `country` (`country_id`, `country_name`) VALUES
+(1, 'Pakistan');
 
 -- --------------------------------------------------------
 
@@ -89,9 +117,16 @@ CREATE TABLE `genre` (
 CREATE TABLE `hall` (
   `hall_id` int(100) NOT NULL,
   `hall_availableSeats` varchar(100) NOT NULL,
-  `hall_theaterName` char(100) NOT NULL,
+  `hall_theaterName` int(100) NOT NULL,
   `hall_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hall`
+--
+
+INSERT INTO `hall` (`hall_id`, `hall_availableSeats`, `hall_theaterName`, `hall_no`) VALUES
+(3, '15', 4, 6);
 
 -- --------------------------------------------------------
 
@@ -120,8 +155,8 @@ CREATE TABLE `movie` (
   `movie_director` varchar(100) NOT NULL,
   `movie_description` varchar(200) NOT NULL,
   `movie_trailer` varchar(100) NOT NULL,
-  `movie_relasedate` date NOT NULL,
-  `movie_theaterName` char(100) NOT NULL,
+  `movie_releaseDate` date NOT NULL,
+  `movie_theaterName` int(100) NOT NULL,
   `movie_poster` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -176,17 +211,17 @@ CREATE TABLE `slot` (
   `slot_id` int(100) NOT NULL,
   `slot_timings` varchar(20) NOT NULL,
   `slot_shift` char(100) NOT NULL,
-  `slot_theaterName` char(100) NOT NULL
+  `slot_theaterName` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `theaters`
+-- Table structure for table `theater`
 --
 
-CREATE TABLE `theaters` (
-  `theater_id` char(20) NOT NULL,
+CREATE TABLE `theater` (
+  `theater_id` int(20) NOT NULL,
   `theater_name` varchar(100) NOT NULL,
   `theater_place` char(100) NOT NULL,
   `theater_owner` varchar(100) NOT NULL,
@@ -195,6 +230,23 @@ CREATE TABLE `theaters` (
   `theater_address` char(100) NOT NULL,
   `theater_image` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `theater`
+--
+
+INSERT INTO `theater` (`theater_id`, `theater_name`, `theater_place`, `theater_owner`, `theater_contactNo`, `theater_email`, `theater_address`, `theater_image`) VALUES
+(1, 'Neuple', 'Johar', 'Ahmer Iqbal', '03353979427', 'ahmeriqbal17@gmail.com', 'ahmeriqbal17@gmail.com', 'forms/uploads/'),
+(4, 'Neuplex', 'Johar', 'Ahmer', '03353979427', 'ahmeriqbal17@gmail.com', 'abc road karachi', 'forms/uploads/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'),
+(5, 'Neuplex', 'Gulshan', 'Ahmer Iqbal', '03353979427', 'ahmeriqbal17@gmail.com', 'ahmeriqbal17@gmail.com', 'uploads/'),
+(6, 'Abc', 'def', 'ghi', '0333333333', 'ahmeriqbal1@yahoo.com', 'abcded road karachi', 'uploads/'),
+(7, 'Attrium', 'Sadar', 'Boss', '0333333333', 'ahmeriqbal1@yahoo.com', 'abcded road karachi', 'uploads/france-in-pictures-beautiful-places-to-photograph-eiffel-tower - Copy.jpg'),
+(8, 'Neuplex', 'Johar', 'Ahmer Iqbal', '03353979427', 'ahmeriqbal17@gmail.com', 'ahmeriqbal17@gmail.com', 'uploads/'),
+(9, 'Neuplex', 'Sadar', 'Ahmer', '0333333333', 'ahmeriqbal1@yahoo.com', 'ahmeriqbal1@yahoo.com', 'uploads/00000.jpg'),
+(10, 'Attrium', 'Sadar', 'Ahmer Iqbal', '0333333333', 'ahmeriqbal1@yahoo.com', 'ahmeriqbal1@yahoo.com', 'uploads/Teri Zindagi Mein Pyar Hai - Badhaai Ho Badhaai _ KK _ Anil Kapoor, Shilpa Shett1632727162.mp4'),
+(11, 'Attrium', 'Gulshan', 'Ahmer Iqbal', '0333333333', 'ahmeriqbal1@yahoo.com', 'abcded road karachi', 'uploads/00000 - Copy.jpg'),
+(12, 'Attrium', 'Gulshan', 'Boss', '0333333333', 'ahmeriqbal1@yahoo.com', 'abcded road karachi', 'uploads/00000 - Copy - Copy.jpg'),
+(13, 'Abc', 'Gulshan', 'Boss', '0333333333', 'ahmeriqbal1@yahoo.com', 'abcded road karachi', 'uploads/00000 - Copy - Copy - Copy.jpg');
 
 -- --------------------------------------------------------
 
@@ -209,6 +261,13 @@ CREATE TABLE `user` (
   `user_contactNo` char(11) DEFAULT NULL,
   `user_age` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `user_name`, `user_password`, `user_contactNo`, `user_age`) VALUES
+('ahmer123', 'Ahmer iqbal', 'ahmer123', '0333333333', 15);
 
 --
 -- Indexes for dumped tables
@@ -234,6 +293,12 @@ ALTER TABLE `booking`
 --
 ALTER TABLE `class`
   ADD PRIMARY KEY (`class_id`);
+
+--
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`contact_id`);
 
 --
 -- Indexes for table `country`
@@ -303,9 +368,9 @@ ALTER TABLE `slot`
   ADD KEY `slot_theatername` (`slot_theaterName`);
 
 --
--- Indexes for table `theaters`
+-- Indexes for table `theater`
 --
-ALTER TABLE `theaters`
+ALTER TABLE `theater`
   ADD PRIMARY KEY (`theater_id`);
 
 --
@@ -319,10 +384,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `country`
 --
 ALTER TABLE `country`
-  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `genre`
@@ -349,6 +420,12 @@ ALTER TABLE `review`
   MODIFY `review_id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `theater`
+--
+ALTER TABLE `theater`
+  MODIFY `theater_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -364,7 +441,7 @@ ALTER TABLE `booking`
 -- Constraints for table `hall`
 --
 ALTER TABLE `hall`
-  ADD CONSTRAINT `hall_ibfk_1` FOREIGN KEY (`hall_theaterName`) REFERENCES `theaters` (`theater_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `hall_ibfk_1` FOREIGN KEY (`hall_theaterName`) REFERENCES `theater` (`theater_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `movie`
@@ -372,7 +449,8 @@ ALTER TABLE `hall`
 ALTER TABLE `movie`
   ADD CONSTRAINT `movie_ibfk_1` FOREIGN KEY (`movie_country`) REFERENCES `country` (`country_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `movie_ibfk_2` FOREIGN KEY (`movie_genre`) REFERENCES `genre` (`genre_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `movie_ibfk_3` FOREIGN KEY (`movie_language`) REFERENCES `language` (`language_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `movie_ibfk_3` FOREIGN KEY (`movie_language`) REFERENCES `language` (`language_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `movie_ibfk_4` FOREIGN KEY (`movie_theaterName`) REFERENCES `theater` (`theater_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `movie_inslot`
@@ -400,7 +478,7 @@ ALTER TABLE `review`
 -- Constraints for table `slot`
 --
 ALTER TABLE `slot`
-  ADD CONSTRAINT `slot_ibfk_1` FOREIGN KEY (`slot_theatername`) REFERENCES `theaters` (`theater_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `slot_ibfk_1` FOREIGN KEY (`slot_theaterName`) REFERENCES `theater` (`theater_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

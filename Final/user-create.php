@@ -16,6 +16,6 @@ if(isset($_POST['submit']))
 
         mysqli_close($conn);
 
-        header("location:slot-index.php?addMessage=Added Successfully");
+        header("location:login.php");
     }
 ?>

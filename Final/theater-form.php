@@ -141,7 +141,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="theater-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <input type="submit" name="submit" value="submit" class="btn btn-dark col-sm-6">
+                        <button class="btn btn-dark col-sm-6" type="button" name="submit" value="submit">Submit</button>
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
