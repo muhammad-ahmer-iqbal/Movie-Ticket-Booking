@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Theater.com</title>
+    <title>About Us | Theater.com</title>
     <?php include 'reuseable code\CDNs.html'?>
 </head>
 
@@ -13,7 +13,7 @@
 
     <!-- Sub-header Start -->
 
-    <?php include 'reuseable code\header.php'; ?>
+    <?php include 'reuseable code\header.html'; ?>
 
     <!-- Sub-header End -->
     <hr class="hr">
@@ -165,10 +165,18 @@
 
     <!-- Footer Start -->
 
-    <?php include 'reuseable code\footer.php'; ?>
+    <?php
+        include 'reuseable code\footer.html';
+        include 'reuseable code\script.html';
+    ?>
 
     <!-- Footer End -->
 
 </body>
+<script>
+    $(document).ready(function(){
+        active("about-us.php");
+    });
+</script>
 
 </html>

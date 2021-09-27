@@ -26,7 +26,6 @@ ol, ul {
 .sidebar.open {
     overflow: scroll;
     width: 250px;
-    
 }
 /* width */
 ::-webkit-scrollbar {

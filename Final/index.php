@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Theater.com</title>
-    <?php include 'reuseable code\CDNs.html'?>
+    <?php include 'reuseable code\CDNs.html' ?>
 </head>
 
 <body>
@@ -61,32 +61,35 @@
         <div class="row mb-5">
 
             <?php
-                $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+            $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
 
-                $query1 = "SELECT movie.movie_id, movie.movie_poster, movie.movie_releaseDate FROM movie_inslot JOIN movie ON movie_inslot.m_inslot_id = movie.movie_id LIMIT 4";
+            $query1 = "SELECT movie.movie_id, movie.movie_poster, movie.movie_releaseDate FROM movie_inslot JOIN movie ON movie_inslot.m_inslot_id = movie.movie_id LIMIT 4";
 
-                $result1 = mysqli_query($conn, $query1);
-                
-                while($row1 = mysqli_fetch_array($result1)){
-                    echo    '<div class="col-md-3 mb-5">
+            $result1 = mysqli_query($conn, $query1);
+
+            while ($row1 = mysqli_fetch_array($result1)) {
+                echo    '<div class="col-md-3 mb-5">
                                 <div class="content">
-                                    <a href="movie-detail.php?movieId='.$row1['movie_id'].'">
+                                    <a href="movie-detail.php?movieId=' . $row1['movie_id'] . '">
                                         <div class="content-overlay"></div>
-                                        <img class="content-image" src="'.$row1['movie_poster'].'">
+                                        <img class="content-image" src="' . $row1['movie_poster'] . '">
                                         <div class="content-details fadeIn-bottom">
                                             <h6>Release Date</h6>
-                                            <h5>'.$row1['movie_releaseDate'].'</h5>
+                                            <h5>' . $row1['movie_releaseDate'] . '</h5>
+                                            <br>
+                                            <h4 class="text-info">Click here</h4>
+                                            <h5 class="text-info">for more details</h5>
                                         </div>
                                     </a>
                                 </div>
                             </div>';
-                }
+            }
             ?>
 
-        </div> 
+        </div>
 
         <div class="read-more text-center">
-            <a href="on-show.php">
+            <a href="movie.php?onShow">
                 See More
             </a>
         </div>
@@ -101,30 +104,33 @@
 
             <?php
 
-                $query2 = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = null LIMIT 4";
+            $query2 = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = null LIMIT 4";
 
-                $result2 = mysqli_query($conn, $query2);
-                
-                while($row2 = mysqli_fetch_array($result2)){
-                    echo    '<div class="col-md-3 mb-5">
+            $result2 = mysqli_query($conn, $query2);
+
+            while ($row2 = mysqli_fetch_array($result2)) {
+                echo    '<div class="col-md-3 mb-5">
                                 <div class="content">
-                                    <a href="movie-detail.php?movieId='.$row2['movie_id'].'">
+                                    <a href="movie-detail.php?movieId=' . $row2['movie_id'] . '">
                                         <div class="content-overlay"></div>
-                                        <img class="content-image" src="'.$row2['movie_poster'].'">
+                                        <img class="content-image" src="' . $row2['movie_poster'] . '">
                                         <div class="content-details fadeIn-bottom">
                                             <h6>Release Date</h6>
                                             <h5>Coming Soon</h5>
+                                            <br>
+                                            <h4 class="text-info">Click here</h4>
+                                            <h5 class="text-info">for more details</h5>
                                         </div>
                                     </a>
                                 </div>
                             </div>';
-                }
+            }
             ?>
 
         </div>
 
         <div class="read-more text-center">
-            <a href="coming-soon.php">
+            <a href="movie.php?comingSoon">
                 See More
             </a>
         </div>
@@ -136,28 +142,31 @@
         </div>
 
         <div class="row mb-5">
-                
+
             <?php
 
-                $query3 = "SELECT theater_id, theater_name, theater_image FROM theater LIMIT 4";
+            $query3 = "SELECT theater_id, theater_name, theater_image FROM theater LIMIT 4";
 
-                $result3 = mysqli_query($conn, $query3);
+            $result3 = mysqli_query($conn, $query3);
 
-                while($row3 = mysqli_fetch_array($result3)){
-                    echo    '<div class="col-md-3 mb-5">
+            while ($row3 = mysqli_fetch_array($result3)) {
+                echo    '<div class="col-md-3 mb-5">
                                 <div class="content">
-                                    <a href="theater-detail.php?theaterId='.$row3['theater_id'].'">
+                                    <a href="theater-detail.php?theaterId=' . $row3['theater_id'] . '">
                                         <div class="content-overlay"></div>
-                                        <img class="content-image" src="'.$row3['theater_image'].'">
+                                        <img class="content-image" src="' . $row3['theater_image'] . '">
                                         <div class="content-details fadeIn-bottom">
-                                            <h1>'.$row3['theater_name'].'</h1>
+                                            <h1>' . $row3['theater_name'] . '</h1>
+                                            <br>
+                                            <h4 class="text-info">Click here</h4>
+                                            <h5 class="text-info">for more details</h5>
                                         </div>
                                     </a>
                                 </div>
                             </div>';
-                }
+            }
 
-                mysqli_close($conn);
+            mysqli_close($conn);
             ?>
 
         </div>
@@ -174,10 +183,18 @@
 
     <!-- Footer Start -->
 
-    <?php include 'reuseable code\footer.html'; ?>
+    <?php
+        include 'reuseable code\footer.html';
+        include 'reuseable code\script.html';
+    ?>
 
     <!-- Footer End -->
 
 </body>
+<script>
+    $(document).ready(function(){
+        active("index.php");
+    });
+</script>
 
 </html>

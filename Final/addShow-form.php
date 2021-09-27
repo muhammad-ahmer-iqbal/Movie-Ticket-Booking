@@ -3,7 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Create Show | Theater.com</title>
+    <title>
+        <?php
+            if(@$_GET['editId'] == true){
+                echo 'Edit';
+            }
+            else{
+                echo 'Create';
+            }
+        ?> Show | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 

@@ -3,7 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Create Language | Theater.com</title>
+    <title>
+        <?php
+            if(@$_GET['editId'] == true){
+                echo 'Edit';
+            }
+            else{
+                echo 'Create';
+            }
+        ?> Language | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 

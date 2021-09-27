@@ -3,7 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Admin List | Theater.com</title>
+    <title>
+        <?php
+            if(@$_GET['editId'] == true){
+                echo 'Edit';
+            }
+            else{
+                echo 'Create';
+            }
+        ?> List | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html';?>
 </head>
 

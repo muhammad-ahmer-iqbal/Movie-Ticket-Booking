@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row my-5">
 
             <div class="col-md-3 mb-5">
                 <div class="content">
@@ -121,19 +121,13 @@
                         <div class="content-overlay"></div>
                         <img class="content-image" src="./assets/card-2.jpg">
                         <div class="content-details fadeIn-bottom">
-                            <h6>Publishing Date</h6>
-                            <h5>17 Feb,</h5>
-                            <h5>2021</h5>
 
                             <h6>Release Date</h6>
                             <h5>26 Feb,</h5>
-                            <h5>2021</h5>
 
-                            <h6>View</h6>
-                            <h5>100616</h5>
-
-                            <h6>Downloads</h6>
-                            <h5>29085</h5>
+<br>
+                            <h4 class="text-info">Click here</h4>
+                            <h5 class="text-info">for more details</h5>
                         </div>
                     </a>
                 </div>
@@ -189,7 +183,7 @@
 
         </div>
 
-        <div class="row my-5">
+        <div class="row">
 
             <div class="col-md-3 mb-5">
                 <div class="content">
