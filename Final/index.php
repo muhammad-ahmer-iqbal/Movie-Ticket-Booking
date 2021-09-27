@@ -13,7 +13,7 @@
 
     <!-- Sub-header Start -->
 
-    <?php include 'reuseable code\header.php'; ?>
+    <?php include 'reuseable code\header.html'; ?>
 
     <!-- Sub-header End -->
 
@@ -174,7 +174,7 @@
 
     <!-- Footer Start -->
 
-    <?php include 'reuseable code\footer.php'; ?>
+    <?php include 'reuseable code\footer.html'; ?>
 
     <!-- Footer End -->
 

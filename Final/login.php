@@ -28,7 +28,7 @@
                     }
                 ?>
                 <div class="inputs">
-                    <form action="login.php" method="POST">
+                    <form action="login(check).php" method="POST">
                         <div class="input mb-4">
                             <input type="text" class="form-control" placeholder="UserID" name="userID">
                         </div>

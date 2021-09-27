@@ -125,11 +125,11 @@
             </div>
         </div>
     </section>
-    <!-- <script>
+    <script>
         $document.ready(function(){
             activeDash("dashboard.php");
         });
-    </script> -->
+    </script>
 
     <?php
         }
