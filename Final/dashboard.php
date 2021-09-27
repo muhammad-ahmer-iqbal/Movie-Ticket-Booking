@@ -15,21 +15,21 @@
         // if(isset($_SESSION['Admin']))
         // {
 
-        // $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+        $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
-        // $query1 = "SELECT * FROM movie";
-        // $query2 = "SELECT * FROM contact_us";
-        // $query3 = "SELECT * FROM theater";
+        $query1 = "SELECT * FROM movie";
+        $query2 = "SELECT * FROM contact_us";
+        $query3 = "SELECT * FROM theater";
 
-        // $movie = mysqli_query($conn, $query1);
-        // $message = mysqli_query($conn, $query2);
-        // $theater = mysqli_query($conn, $query3);
+        $movie = mysqli_query($conn, $query1);
+        $message = mysqli_query($conn, $query2);
+        $theater = mysqli_query($conn, $query3);
 
-        // $movieCount = mysqli_num_rows($movie);
-        // $theaterCount = mysqli_num_rows($theater);
-        // $messageCount = mysqli_num_rows($message);
+        $movieCount = mysqli_num_rows($movie);
+        $theaterCount = mysqli_num_rows($theater);
+        $messageCount = mysqli_num_rows($message);
         
-        // mysqli_close($conn);
+        mysqli_close($conn);
         
         include 'reuseable code\dashboard vertical nav.html';
         include 'reuseable code\dashboard header.php';
@@ -120,7 +120,7 @@
         </div>
     </section>
     <script>
-        $document.ready(function(){
+        $(document).ready(function(){
             activeDash("dashboard.php");
         });
     </script>
