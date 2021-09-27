@@ -23,8 +23,6 @@
     <!-- Custom Style Css Start -->
 
     <link rel="stylesheet" href="stylesheet\style.css">
-    
-    <link rel="stylesheet" href="stylesheet\dashboard.css">
 
     <!-- Custom Style Css End -->
     
