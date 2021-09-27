@@ -11,9 +11,9 @@
 
 <body>
     <?php
-        session_start();
-        if(isset($_SESSION['Admin']))
-        {
+        // session_start();
+        // if(isset($_SESSION['Admin']))
+        // {
 
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
@@ -131,12 +131,12 @@
         });
     </script>
 
-    <?php
-        }
-        else{
-            header('location:admin-login.php');
-        }
-    ?>
+    <!-- <?php
+        // }
+        // else{
+        //     header('location:admin-login.php');
+        // }
+    ?> -->
 </body>
 <?php include 'reuseable code\dashboard script.html';?>
 </html>
