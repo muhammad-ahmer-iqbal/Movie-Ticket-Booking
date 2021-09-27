@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
@@ -126,8 +125,8 @@
         </div>
     </section>
     <script>
-        $document.ready(function(){
-            activeDash(dashboard.php);
+        $(document).ready(function(){
+            activeDash("dashboard.php");
         });
     </script>
 
