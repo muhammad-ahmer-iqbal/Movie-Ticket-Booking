@@ -152,6 +152,12 @@ ol, ul {
 .sidebar li a:hover {
     background: white;
 }
+.active{
+    background-color: white !important;
+}
+.active i, .active span{
+    color: #11101D !important;
+}
 
 .sidebar li a .links_name {
     color: #fff;
