@@ -15,21 +15,21 @@
         // if(isset($_SESSION['Admin']))
         // {
 
-        $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+        // $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
         
-        $query1 = "SELECT * FROM movie";
-        $query2 = "SELECT * FROM contact_us";
-        $query3 = "SELECT * FROM theater";
+        // $query1 = "SELECT * FROM movie";
+        // $query2 = "SELECT * FROM contact_us";
+        // $query3 = "SELECT * FROM theater";
 
-        $movie = mysqli_query($conn, $query1);
-        $message = mysqli_query($conn, $query2);
-        $theater = mysqli_query($conn, $query3);
+        // $movie = mysqli_query($conn, $query1);
+        // $message = mysqli_query($conn, $query2);
+        // $theater = mysqli_query($conn, $query3);
 
-        $movieCount = mysqli_num_rows($movie);
-        $theaterCount = mysqli_num_rows($theater);
-        $messageCount = mysqli_num_rows($message);
+        // $movieCount = mysqli_num_rows($movie);
+        // $theaterCount = mysqli_num_rows($theater);
+        // $messageCount = mysqli_num_rows($message);
         
-        mysqli_close($conn);
+        // mysqli_close($conn);
         
         include 'reuseable code\dashboard vertical nav.html';
         include 'reuseable code\dashboard header.php';
@@ -63,9 +63,7 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Moives</h1>
-                                        <?php
-                                            echo '<h4>' . $movieCount .'</h4>';
-                                        ?>
+                                        45
                                     </div>
                                     <hr>
                                     <div class="card-btn">
@@ -86,9 +84,7 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Theaters</h1>
-                                        <?php
-                                            echo '<h4>' . $theaterCount .'</h4>';
-                                        ?>
+                                        65
                                     </div>
                                     <hr>
                                     <div class="card-btn">
@@ -109,9 +105,7 @@
                                 <div class="col-md-8">
                                     <div class="card-heading">
                                         <h1>Messages</h1>
-                                        <?php
-                                            echo '<h4>' . $messageCount .'</h4>';
-                                        ?>
+                                        98
                                     </div>
                                     <hr>
                                     <div class="card-btn d-grid gap-2">
