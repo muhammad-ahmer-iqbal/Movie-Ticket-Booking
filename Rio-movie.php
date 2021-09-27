@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="stylesheet\style.css">
 
     <!-- Custom Style Css End -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
 </head>
 
@@ -170,8 +172,19 @@
             <div class="review mb-5">
                 <h4 class="mb-4">Review</h4>
                 <form class="review-mess">
-                    <label for="textarea" class="form-label">Rating Stars</label>
-                    <textarea class="form-control" id="textarea" placeholder="Message" rows="3"></textarea>
+                    <label for="textarea" class="form-label text-start">Rating Stars <br>
+                        <span class="text-end">
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+                        </span>
+                    </label>
+                    <textarea class="form-control mb-3" id="textarea" placeholder="Message" rows="3"></textarea>
+                    <button type="submit" class="btn btn-outline-danger text-light border-2">Submit</button>
                 </form>
             </div>
 
