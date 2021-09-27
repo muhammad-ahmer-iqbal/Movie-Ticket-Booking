@@ -173,10 +173,10 @@ ol, ul {
     background: white;
 }
 .activeDashboard{
-    background-color: white;
+    background-color: white !important;
 }
 .activeDashboard i, .activeDashboard span{
-    color: #11101D;
+    color: #11101D !important;
 }
 
 .sidebar li a .links_name {

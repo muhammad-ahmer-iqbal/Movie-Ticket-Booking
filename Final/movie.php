@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On Show | Theater.com</title>
+    <title>
+        <?php
+            if(@$_GET['onShow']){
+                echo 'On Show';
+            }
+            elseif (@$_GET['onComing']) {
+                echo 'Coming Soon';
+            }
+            else{
+                echo 'All Movies';
+            }
+        ?> | Theater.com</title>
     <?php include 'reuseable code\CDNs.html'?>
 </head>
 
@@ -123,6 +134,19 @@
             ?>
 
         </div>
+
+        
+       <?php
+            if((@$_GET['onShow']) || (@$_GET['onShow'])){
+                echo    '<div class="read-more text-center">
+                            <a href="movie.php">
+                                Browse All Movies
+                            </a>
+                        </div>';
+            }
+       ?>
+
+                    
 
     </div>
 

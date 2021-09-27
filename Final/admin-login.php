@@ -11,6 +11,15 @@
 
 <body class="adminBody">
 
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+            header('location:dashboard.php');
+        }
+        else{
+    ?>
+    
     <!-- Login Start -->
 
     <div class="login">
@@ -49,6 +58,10 @@
 
     <!-- Login Start -->
 
+    
+    <?php
+        }
+    ?>
 </body>
 
 </html>
