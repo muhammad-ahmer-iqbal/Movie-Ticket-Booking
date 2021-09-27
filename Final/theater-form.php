@@ -44,6 +44,30 @@
                     echo '<h1 class="display-3 text-center">Add Theater</h1>';
                 }
                 
+                if(@$_GET['not_image'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['not_image']."</div>";
+                }
+                if(@$_GET['already_exist'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['already_exist']."</div>";
+                }
+                if(@$_GET['too_large'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['too_large']."</div>";
+                }
+                if(@$_GET['wrong_extension'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['wrong_extension']."</div>";
+                }
+                if(@$_GET['not_uploaded'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['not_uploaded']."</div>";
+                }
+                if(@$_GET['uploading_error'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['uploading_error']."</div>";
+                }
             ?>
         </div>
         <div class="form">
@@ -58,20 +82,20 @@
             ?>
                 <div class="mb-3">
                     <label class="form-label">Theater Name</label>
-                    <input type="text" class="form-control" name="theater_name" value="<?php echo @$name ?>">
+                    <input type="text" class="form-control" name="theater_name">
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Place</label>
-                            <input type="text" class="form-control" name="theater_place" value="<?php echo @$place ?>">
+                            <input type="text" class="form-control" name="theater_place">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Owner</label>
-                            <input type="text" class="form-control" name="theater_owner" value="<?php echo @$owner ?>">
+                            <input type="text" class="form-control" name="theater_owner">
                         </div>
                     </div>
                 </div>
@@ -80,13 +104,13 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Contact Number</label>
-                            <input type="number" class="form-control" name="theater_contactNo" placeholder="XXXX-XXXXXXX" value="<?php echo @$contact ?>">
+                            <input type="number" class="form-control" name="theater_contactNo" placeholder="XXXX-XXXXXXX">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" name="theater_email" placeholder="abc@gmail.com" value="<?php echo @$email ?>">
+                            <input type="email" class="form-control" name="theater_email" placeholder="abc@gmail.com">
                         </div>
                     </div>
                 </div>
@@ -96,7 +120,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Address</label>
-                            <input type="text" class="form-control" name="theater_address" value="<?php echo @$address ?>">
+                            <input type="text" class="form-control" name="theater_address">
                         </div>
 
                     </div>
@@ -117,7 +141,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="theater-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <input type="submit" name="submit" value="Submit" class="btn btn-dark col-sm-6">
+                        <input type="submit" name="submit" value="submit" class="btn btn-dark col-sm-6">
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
@@ -139,14 +163,14 @@
     if(@$editId != null){
         echo '  <script>
                     $(document).ready(function(){
-                        $("[name=theater_id]").attr("value", "'.$editId.'");
-                        $("[name=theater_name]").attr("value", "'.$name.'");
-                        $("[name=theater_place]").attr("value", "'.$place.'");
-                        $("[name=theater_owner]").attr("value", "'.$owner.'");
-                        $("[name=theater_contactNo]").attr("value", "'.$contact.'");
-                        $("[name=theater_email]").attr("value", "'.$email.'");
-                        $("[name=theater_address]").attr("value", "'.$email.'");
-                        $("[name=theater_image]").attr("value", "'.$image.'");
+                        $("[name=theater_id]").val("'.$editId.'");
+                        $("[name=theater_name]").val("'.$name.'");
+                        $("[name=theater_place]").val("'.$place.'");
+                        $("[name=theater_owner]").val("'.$owner.'");
+                        $("[name=theater_contactNo]").val("'.$contact.'");
+                        $("[name=theater_email]").val("'.$email.'");
+                        $("[name=theater_address]").val("'.$email.'");
+                        $("[name=theater_image]").val("'.$image.'");
                     })
                 </script>';
     }

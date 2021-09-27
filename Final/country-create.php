@@ -7,12 +7,12 @@ if(isset($_POST['submit']))
         // $id = $_POST['country_id'];
         $name = $_POST['country_name'];
 
-        $query = "INSERT INTO 'country' VALUES('', '$name')";
+        $query = "INSERT INTO country (country_name) VALUES ('$name')";
 
         $ins = mysqli_query($conn, $query);
 
         mysqli_close($conn);
 
-        header("location:country-index.php?message=Added Successfully");
+        header("location:country-index.php?addMessage=Added Successfully");
     }
 ?>

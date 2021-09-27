@@ -65,6 +65,30 @@
                     echo '<h1 class="display-3 text-center">Add Movie</h1>';
                 }
                 
+                if(@$_GET['not_image'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['not_image']."</div>";
+                }
+                if(@$_GET['already_exist'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['already_exist']."</div>";
+                }
+                if(@$_GET['too_large'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['too_large']."</div>";
+                }
+                if(@$_GET['wrong_extension'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['wrong_extension']."</div>";
+                }
+                if(@$_GET['not_uploaded'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['not_uploaded']."</div>";
+                }
+                if(@$_GET['uploading_error'])
+                {
+                    echo "<div class='alert alert-danger my-3' role='alert'>".$_GET['uploading_error']."</div>";
+                }                
             ?>
         </div>
         <div class="form">

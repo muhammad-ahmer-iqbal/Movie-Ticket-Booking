@@ -9,12 +9,12 @@ if(isset($_POST['submit']))
         $shift = $_POST['slot_shift'];
         $theater = $_POST['slot_theaterName'];
 
-        $query = "INSERT INTO 'slot' VALUES('', '$timing', '$shift', '$theater')";
+        $query = "INSERT INTO slot (slot_timings, slot_shift, slot_theaterName) VALUES ('$timing', '$shift', '$theater')";
 
         $ins = mysqli_query($conn, $query);
 
         mysqli_close($conn);
 
-        header("location:slot-index.php?message=Added Successfully");
+        header("location:slot-index.php?addMessage=Added Successfully");
     }
 ?>

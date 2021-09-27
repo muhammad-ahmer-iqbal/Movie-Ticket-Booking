@@ -9,12 +9,12 @@ if(isset($_POST['submit']))
         $theater = $_POST['hall_theaterName'];
         $hall = $_POST['hall_no'];
 
-        $query = "INSERT INTO 'hall' VALUES('', '$seats', '$theater', '$hall')";
+        $query = "INSERT INTO hall (hall_availableSeats, hall_theaterName, hall_no) VALUES ('$seats', '$theater', '$hall')";
 
         $ins = mysqli_query($conn, $query);
 
         mysqli_close($conn);
 
-        header("location:hall-index.php?message=Added Successfully");
+        header("location:hall-index.php?addMessage=Added Successfully");
     }
 ?>

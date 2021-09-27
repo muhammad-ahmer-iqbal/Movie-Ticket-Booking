@@ -7,12 +7,12 @@ if(isset($_POST['submit']))
         // $id = $_POST['genre_id'];
         $name = $_POST['genre_name'];
 
-        $query = "INSERT INTO 'genre' VALUES('', '$name')";
+        $query = "INSERT INTO genre (genre_name) VALUES ('$name')";
 
         $ins = mysqli_query($conn, $query);
 
         mysqli_close($conn);
 
-        header("location:genre-index.php?message=Added Successfully");
+        header("location:genre-index.php?addMessage=Added Successfully");
     }
 ?>
