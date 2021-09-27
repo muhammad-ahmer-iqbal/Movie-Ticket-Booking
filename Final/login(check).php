@@ -9,7 +9,7 @@
             $id = $_POST['userID'];
             $pass = $_POST['userPassword'];
 
-            $query = "SELECT * FROM user where user_id = '$id' and user_password = '$pass'";
+            $query = "SELECT * FROM user where 'user_id' = '$id' and 'user_password' = '$pass'";
 
             $result = mysqli_query($conn, $query);
 
@@ -17,14 +17,14 @@
                 session_start();
                 $_SESSION['UserName'] = $row['user_name'];
             }
-            if(mysqli_fetch_array($result))
-            {
-                $_SESSION['User'] = $id;
-                header("location:index.php");
-            }
-            else{
-                header("location:login.php?Error=Incorrect Username or Password");
-            }
+                if(mysqli_fetch_array($result))
+                {
+                    $_SESSION['User'] = $id;
+                    header("location:index.php");
+                }
+                else{
+                    header("location:login.php?Error=Incorrect Username or Password");
+                }
 
             mysqli_close($conn);
         }

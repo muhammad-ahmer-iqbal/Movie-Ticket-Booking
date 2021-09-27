@@ -3,22 +3,28 @@
     let closeBtn = document.querySelector("#btn");
     let searchBtn = document.querySelector(".bx-search");
 
-    //geting date and time
-    const d = new Date();
-    var day = d.getDate();
-    var month = d.getMonth();
-    var year = d.getFullYear();
-    document.getElementById("date").innerText = `${day}-${month+1}-${year}`;
+    setInterval(() => {
+        dateTime();
+    }, 1000);
+    
+    function dateTime(){
+        //geting date and time
+        const d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        document.getElementById("date").innerText = `${day}-${month+1}-${year}`;
 
-    var hour = d.getHours();
-    var minute = d.getMinutes();
-    var second = d.getSeconds();
-    var a = 'AM';
-    if(hour >= 12){
-        hour = hour - 12;
-        a = 'PM';
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        var second = d.getSeconds();
+        var a = 'AM';
+        if(hour >= 12){
+            hour = hour - 12;
+            a = 'PM';
+        }
+        document.getElementById("time").innerText = `${hour}:${minute}:${second} ${a}`;
     }
-    document.getElementById("time").innerText = `${hour}:${minute}:${second} ${a}`;
 
     closeBtn.addEventListener("click", () => {
         sidebar.classList.toggle("open");
