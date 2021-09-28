@@ -26,7 +26,7 @@
         while($row = mysqli_fetch_array($result)){
             $query2 = "SELECT genre_name FROM genre WHERE genre_id = $row[movie_genre]";
             $query3 = "SELECT country_name FROM country WHERE country_id = $row[movie_country]";
-            $query3 = "SELECT language_name FROM language WHERE language_id = $row[movie_language]";
+            $query4 = "SELECT language_name FROM language WHERE language_id = $row[movie_language]";
             $result2 = mysqli_query($conn, $query2);
             $result3 = mysqli_query($conn, $query3);
             $result4 = mysqli_query($conn, $query4);

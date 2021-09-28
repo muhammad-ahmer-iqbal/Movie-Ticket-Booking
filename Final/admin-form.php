@@ -11,7 +11,7 @@
             else{
                 echo 'Create';
             }
-        ?> List | Theater.com</title>
+        ?> Admin | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html';?>
 </head>
 
@@ -66,7 +66,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="admin_password">
+                    <input type="text" class="form-control" name="admin_password">
                 </div>
 
                 <div class="d-grid gap-2 mt-4">

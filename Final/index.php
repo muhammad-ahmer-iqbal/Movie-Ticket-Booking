@@ -104,7 +104,7 @@
 
             <?php
 
-            $query2 = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = null LIMIT 4";
+            $query2 = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = 0 LIMIT 4";
 
             $result2 = mysqli_query($conn, $query2);
 

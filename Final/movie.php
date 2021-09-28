@@ -94,7 +94,7 @@
                     }
                 }
                 elseif (@$_GET['comingSoon']) {
-                    $query = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = null";
+                    $query = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = 0";
 
                     $result = mysqli_query($conn, $query);
 
