@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
         $id = $_POST['admin_id'];
         $password = $_POST['admin_password'];
 
-        $query = "UPDATE admin SET admin_id = '$id', admin_password = '$password' WHERE admin_id = '$id'";
+        $query = "UPDATE admin SET admin_password = '$password' WHERE admin_id = '$id'";
 
         $ins = mysqli_query($conn, $query);
 

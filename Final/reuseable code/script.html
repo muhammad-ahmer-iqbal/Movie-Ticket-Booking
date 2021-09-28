@@ -1,5 +1,13 @@
 <script>
-    function active(link){
-        $('[href="'+link+'"]').addClass("active");
+    function active(link) {
+        $('[href="' + link + '"]').addClass("active");
+    }
+    function filter(id) {
+        $("#"+id).on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".check .col-md-3").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
     }
 </script>

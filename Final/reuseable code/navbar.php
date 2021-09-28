@@ -17,10 +17,10 @@
                         <a class="nav-link" href="about-us.php">About Us</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="movie.php?onShow">On Show</a>
+                        <a class="nav-link" href="movie.php?onShow=1">On Show</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="movie.php?comingSoon">Coming Soon</a>
+                        <a class="nav-link" href="movie.php?comingSoon=1">Coming Soon</a>
                     </li>
                     <li class="nav-item me-4">
                         <a class="nav-link" href="theater.php">Theater</a>

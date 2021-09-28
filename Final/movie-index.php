@@ -70,7 +70,7 @@
                                 $query1 = "SELECT theater_name FROM theater WHERE theater_id = $row[movie_theaterName]";
                                 $query2 = "SELECT genre_name FROM genre WHERE genre_id = $row[movie_genre]";
                                 $query3 = "SELECT country_name FROM country WHERE country_id = $row[movie_country]";
-                                $query3 = "SELECT language_name FROM language WHERE language_id = $row[movie_language]";
+                                $query4 = "SELECT language_name FROM language WHERE language_id = $row[movie_language]";
                                 $result1 = mysqli_query($conn, $query1);
                                 $result2 = mysqli_query($conn, $query2);
                                 $result3 = mysqli_query($conn, $query3);
@@ -96,7 +96,7 @@
                                             <td>'.$row['movie_language'].'</td>
                                             <td>'.$row['movie_writer'].'</td>
                                             <td>'.$row['movie_director'].'</td>
-                                            <td>'.$row['movie_relasedate'].'</td>
+                                            <td>'.$row['movie_releaseDate'].'</td>
                                             <td>'.$row['movie_theaterName'].'</td>
                                             <td>'.$row['movie_description'].'</td>
                                             <td><img src="'.$row['movie_poster'].'" alt="movie img" width=100% height=100px></td>

@@ -55,15 +55,15 @@
 
                     while($row = mysqli_fetch_array($result)){
                         $name = $row['movie_name'];
-                        $genre = $row['movie_genre'];
-                        $country = $row['movie_country'];
-                        $language = $row['movie_language'];
+                        $moviegenre = $row['movie_genre'];
+                        $moviecountry = $row['movie_country'];
+                        $movielanguage = $row['movie_language'];
                         $writer = $row['movie_writer'];
                         $director = $row['movie_director'];
                         $description = $row['movie_description'];
                         $trailer = $row['movie_trailer'];
                         $release = $row['movie_releaseDate'];
-                        $movietheater = $row['movie_theaterName '];
+                        $movietheater = $row['movie_theaterName'];
                         $poster = $row['movie_poster'];
                     }
 
@@ -235,7 +235,7 @@
                             echo '<img src="'.$poster.'" alt="theater img" height=100px class="img-responsive">';
                         }
                     ?>
-                    <input type="file" class="form-control form-control-sm" name="movie_poser">
+                    <input type="file" class="form-control form-control-sm" name="movie_poster">
                 </div>
 
                 <div class="mb-3">
@@ -246,7 +246,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="movie-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <button class="btn btn-dark col-sm-6" type="button" name="submit" value="submit">Submit</button>
+                        <button class="btn btn-dark col-sm-6" type="submit" name="submit" value="submit">Submit</button>
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
@@ -270,15 +270,15 @@
                     $(document).ready(function(){
                         $("[name=movie_id]").val("'.$editId.'");
                         $("[name=movie_name]").val("'.$name.'");
-                        $("[value='.$genre.']").attr("selected", true);
-                        $("[value='.$country.']").attr("selected", true);
-                        $("[value='.$language.']").attr("selected", true);
+                        $("[value='.$moviegenre.']").attr("selected", true);
+                        $("[value='.$moviecountry.']").attr("selected", true);
+                        $("[value='.$movielanguage.']").attr("selected", true);
                         $("[name=movie_writer]").val("'.$writer.'");
                         $("[name=movie_director]").val("'.$director.'");
                         $("[name=movie_description]").val("'.$description.'");
                         $("[name=movie_trailer]").val("'.$trailer.'");
                         $("[name=movie_releaseDate]").val("'.$release.'");
-                        $("[value='.$theater.']").attr("selected", true);
+                        $("[value='.$movietheater.']").attr("selected", true);
                     })
                 </script>';
     }

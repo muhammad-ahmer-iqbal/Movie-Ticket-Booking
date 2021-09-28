@@ -10,7 +10,7 @@
             if(@$_GET['onShow']){
                 echo 'On Show';
             }
-            elseif (@$_GET['onComing']) {
+            elseif (@$_GET['comingSoon']) {
                 echo 'Coming Soon';
             }
             else{
@@ -44,7 +44,7 @@
                     if(@$_GET['onShow']){
                         echo 'On Show';
                     }
-                    elseif (@$_GET['onComing']) {
+                    elseif (@$_GET['comingSoon']) {
                         echo 'Coming Soon';
                     }
                     else{
@@ -55,12 +55,22 @@
             </div>
         </div>
 
-        <div class="row my-5">
+        <?php
+            if((@$_GET['onShow'] == false) && (@$_GET['comingSoon'] == false)){
+                echo    '<div class="search-field my-5">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search Movie" id="searchMovie">
+                            </div>
+                        </div>';
+            }
+       ?>
+
+        <div class="row my-5 check">
 
             <?php
                 $conn = $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
 
-                if($_GET['onShow']){
+                if(@$_GET['onShow']){
                     $query = "SELECT movie.movie_id, movie.movie_poster, movie.movie_releaseDate FROM movie_inslot JOIN movie ON movie_inslot.m_inslot_id = movie.movie_id";
 
                     $result = mysqli_query($conn, $query);
@@ -83,7 +93,7 @@
                                 </div>';
                     }
                 }
-                elseif ($_GET['onComing']) {
+                elseif (@$_GET['comingSoon']) {
                     $query = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = null";
 
                     $result = mysqli_query($conn, $query);
@@ -137,7 +147,7 @@
 
         
        <?php
-            if((@$_GET['onShow']) || (@$_GET['onShow'])){
+            if((@$_GET['onShow']) || (@$_GET['comingSoon'])){
                 echo    '<div class="read-more text-center">
                             <a href="movie.php">
                                 Browse All Movies
@@ -163,8 +173,18 @@
 
 </body>
 <script>
-    $(document).ready(function(){
-        active("on-show.php");
+    $(document).ready(function() {
+        <?php
+            if(@$_GET['onShow']){
+                echo 'active("movie.php?onShow=1");';
+            }
+            elseif (@$_GET['comingSoon']) {
+                echo 'active("movie.php?comingSoon=1");';
+            }
+            else{
+                echo 'filter("searchMovie");';
+            }
+        ?>
     });
 </script>
 

@@ -30,11 +30,11 @@
             $image = $row['theater_image'];
         }
         mysqli_close($conn);
+
+    // Sub-header Start
+
+        include 'reuseable code\header.html';
     ?>
-
-    <!-- Sub-header Start -->
-
-    <?php include 'reuseable code\header.html'; ?>
 
     <!-- Sub-header End -->
 

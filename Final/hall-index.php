@@ -36,7 +36,7 @@
                     echo "<div class='alert alert-info my-3' role='alert'>".$_GET['editMessage']."</div>";
                 }
             ?>
-            <a href="class-form.php" class="btn btn-success btn-md" style="width: 7%; font-weight:600;">Add</a>
+            <a href="hall-form.php" class="btn btn-success btn-md" style="width: 7%; font-weight:600;">Add</a>
             <table class="table table-hover align-middle">
                 <thead>
                     <tr>

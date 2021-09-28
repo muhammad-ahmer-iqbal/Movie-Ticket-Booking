@@ -77,9 +77,9 @@
                                 echo    '<tr>
                                             <th scope="row">'.$serial.'</th>
                                             <td>'.$row['m_inslot_movieName'].'</td>
-                                            <td>'.$row['m_inslot_day'].'</td>
                                             <td>'.$row['m_inslot_slotId'].'</td>
                                             <td>'.$row['m_inslot_hallNo'].'</td>
+                                            <td>'.$row['m_inslot_day'].'</td>
                                             <td>
                                                 <a href="addShow-form.php?editId='.$row['m_inslot_id'].'" class="btn btn-outline-success">Edit</a>
                                                 <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['m_inslot_id'].')">Delete</button>

@@ -50,7 +50,7 @@
         </div>
         <div class="form">
             <?php
-                if(@$language != null){
+                if(@$editId != null){
                     echo    '<form action="language-edit.php" method="POST">
                             <input type="hidden" name="language_id"/>';
                 }
@@ -67,7 +67,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="language-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <button class="btn btn-dark col-sm-6" type="button" name="submit" value="submit">Submit</button>
+                        <button class="btn btn-dark col-sm-6" type="submit" name="submit" value="submit">Submit</button>
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">

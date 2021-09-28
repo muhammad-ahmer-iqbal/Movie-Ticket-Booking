@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
         $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
 
         $id = $_POST['slot_id'];
-        $timing = $_POST['slot_timnigs'];
+        $timing = $_POST['slot_timings'];
         $shift = $_POST['slot_shift'];
         $theater = $_POST['slot_theaterName'];
 

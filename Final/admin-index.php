@@ -42,7 +42,6 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Admin ID</th>
-                        <th scope="col">Admin Password</th>
                         <th>Options</th>
                     </tr>
                 </thead>
@@ -60,10 +59,9 @@
                                 echo    '<tr>
                                             <td>'.$serial.'</td>
                                             <td>'.$row['admin_id'].'</td>
-                                            <td>'.$row['admin_password'].'</td>
                                             <td>
-                                                <a href="admin-form.php?editId='.$row['admin_id'].'" class="btn btn-outline-success">Edit</a>
-                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['admin_id'].')">Delete</button>
+                                                <a href="admin-form.php?editId="'.$row['admin_id'].'"" class="btn btn-outline-success">Edit</a>
+                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, ' .$row['admin_id']. ')">Delete</button>
                                                 <a href="data-delete.php?adminDelete='.$row['admin_id'].'" class="btn btn-outline-danger" id="'.$row['admin_id'].'" style="display: none;">Confirm Delete</a>
                                             </td>
                                         </tr>';

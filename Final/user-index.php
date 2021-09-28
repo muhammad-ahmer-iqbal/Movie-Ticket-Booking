@@ -68,7 +68,7 @@
                                             <td>'.$row['user_age'].'</td>
                                             <td>
                                                 <a href="user-form.php?editId='.$row['user_id'].'" class="btn btn-outline-success">Edit</a>
-                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['user_id'].')">Delete</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="del(this, '.$row['user_id'].'")">Delete</button>
                                                 <a href="data-delete.php?userDelete='.$row['user_id'].'" class="btn btn-outline-danger" id="'.$row['user_id'].'" style="display: none;">Confirm Delete</a>
                                             </td>
                                         </tr>';

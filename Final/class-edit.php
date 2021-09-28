@@ -14,6 +14,6 @@ if(isset($_POST['submit']))
 
         mysqli_close($conn);
 
-        header("location:class-index.php?editmessage=Edited Successfully");
+        header("location:class-index.php?editMessage=Edited Successfully");
     }
 ?>

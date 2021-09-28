@@ -37,7 +37,7 @@
         <div class="heading">
             <?php
                 if(@$_GET['editId'] == true){
-                    echo '<h1 class="display-3 text-center">Edit Hall</h1>';
+                    echo '<h1 class="display-3 text-center">Edit Slot</h1>';
 
                     $editId = $_GET['editId'];
 
@@ -55,7 +55,7 @@
                     mysqli_close($conn);
                 }
                 else{
-                    echo '<h1 class="display-3 text-center">Add Hall</h1>';
+                    echo '<h1 class="display-3 text-center">Add Slot</h1>';
                 }
                 
             ?>
@@ -102,10 +102,10 @@
                             <label class="form-label">Shift</label>
                             <select class="form-select" name="slot_shift">
                                 <option selected>Select Shift</option>
-                                <option value="Morning">Morning</option>
-                                <option value="Evening">Evening</option>
-                                <option value="Night">Night</option>
-                            </select>
+                                    <option value="Morning">Morning</option>
+                                    <option value="Evening">Evening</option>
+                                    <option value="Night">Night</option>
+                                </select>
                         </div>
 
                     </div>
@@ -114,7 +114,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="slot-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <button class="btn btn-dark col-sm-6" type="button" name="submit" value="submit">Submit</button>
+                        <button class="btn btn-dark col-sm-6" type="submit" name="submit" value="submit">Submit</button>
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">

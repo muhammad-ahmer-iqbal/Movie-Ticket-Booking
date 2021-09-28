@@ -72,7 +72,7 @@
                                 <div class="content">
                                     <a href="movie-detail.php?movieId=' . $row1['movie_id'] . '">
                                         <div class="content-overlay"></div>
-                                        <img class="content-image" src="' . $row1['movie_poster'] . '">
+                                        <img class="content-image" src="' . $row1['movie_poster'] . '" alt="movie img">
                                         <div class="content-details fadeIn-bottom">
                                             <h6>Release Date</h6>
                                             <h5>' . $row1['movie_releaseDate'] . '</h5>
@@ -113,7 +113,7 @@
                                 <div class="content">
                                     <a href="movie-detail.php?movieId=' . $row2['movie_id'] . '">
                                         <div class="content-overlay"></div>
-                                        <img class="content-image" src="' . $row2['movie_poster'] . '">
+                                        <img class="content-image" src="' . $row2['movie_poster'] . '" alt="movie img">
                                         <div class="content-details fadeIn-bottom">
                                             <h6>Release Date</h6>
                                             <h5>Coming Soon</h5>
@@ -154,7 +154,7 @@
                                 <div class="content">
                                     <a href="theater-detail.php?theaterId=' . $row3['theater_id'] . '">
                                         <div class="content-overlay"></div>
-                                        <img class="content-image" src="' . $row3['theater_image'] . '">
+                                        <img class="content-image" src="' . $row3['theater_image'] . '" alt="theater img">
                                         <div class="content-details fadeIn-bottom">
                                             <h1>' . $row3['theater_name'] . '</h1>
                                             <br>

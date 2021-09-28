@@ -3,15 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>
-        <?php
-            if(@$_GET['editId'] == true){
-                echo 'Edit';
-            }
-            else{
-                echo 'Create';
-            }
-        ?> User | Theater.com</title>
+    <title>Edit User | Theater.com</title>
     <?php include 'reuseable code\dashboard CDNs.html'?>
 </head>
 
@@ -65,7 +57,7 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="text" class="form-control" name="user_password">
+                            <input type="password" class="form-control" name="user_password">
                         </div>
                     </div>
                 </div>
@@ -88,7 +80,7 @@
                 <div class="d-grid gap-2 mt-4">
                     <div class="row">
                         <a href="user-index.php" class="btn btn-outline-dark col-sm-6">Back</a>
-                        <button class="btn btn-dark col-sm-6" type="button" name="submit" value="submit">Submit</button>
+                        <button class="btn btn-dark col-sm-6" type="submit" name="submit" value="submit">Submit</button>
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-2">
