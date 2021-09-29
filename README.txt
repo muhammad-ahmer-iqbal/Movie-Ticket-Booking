@@ -9,3 +9,7 @@ To use PHP project you have to first import database into your own system throug
 8.	Now go to 
 		localhost/Movie-Ticket-Booking/Site -> for user
 		localhost/Movie-Ticket-Booking/Dashboard/admin-login.php -> for admin
+9.	admin credential:	User ID = admin_ahmer
+				User Password = ahmer
+	user credential:	User ID = ahmer123
+				User Password = ahmer123
