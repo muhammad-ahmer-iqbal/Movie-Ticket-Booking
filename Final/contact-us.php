@@ -51,7 +51,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Name</label>
-                        <textarea class="form-control mb-3" id="textarea" placeholder="Message" rows="3" name="contact_message"></textarea>
+                        <textarea class="form-control mb-3" id="textarea" placeholder="Message" rows="8" name="contact_message"></textarea>
                     </div>
                     <div class="d-grid gap-2 mt-4">
                         <button class="btn btn-dark" type="submit" name="submit" value="submit">Submit</button>
@@ -68,7 +68,10 @@
 
     <!-- Footer Start -->
 
-    <?php include 'reuseable code\footer.html'; ?>
+    <?php
+        include 'reuseable code\footer.html';
+        include 'reuseable code\script.html';
+    ?>
 
     <!-- Footer End -->
 
@@ -79,6 +82,7 @@
             var x = $("#m_inslot_id").val();
             $("[name=booking_movieInSlotId]").val(x);
         });
+        active("contact-us.php");
         <?php
             if(isset($_SESSION['User'])){
                 echo    '$("[name=contact_name]").val('.$_SESSION['UserName'].');

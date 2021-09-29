@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?php
-            if(@$_GET['onShow']){
+            if(isset($_GET['onShow'])){
                 echo 'On Show';
             }
-            elseif (@$_GET['comingSoon']) {
+            elseif (isset($_GET['comingSoon'])) {
                 echo 'Coming Soon';
             }
             else{
@@ -43,10 +43,10 @@
             <div class="heading">
                 <h2>
                 <?php
-                    if(@$_GET['onShow']){
+                    if(isset($_GET['onShow'])){
                         echo 'On Show';
                     }
-                    elseif (@$_GET['comingSoon']) {
+                    elseif (isset($_GET['commingSoon'])) {
                         echo 'Coming Soon';
                     }
                     else{
@@ -72,7 +72,7 @@
             <?php
                 $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
 
-                if(@$_GET['onShow']){
+                if(isset($_GET['onShow'])){
                     $query = "SELECT movie.movie_id, movie.movie_poster, movie.movie_releaseDate FROM movie_inslot JOIN movie ON movie_inslot.m_inslot_id = movie.movie_id";
 
                     $result = mysqli_query($conn, $query);
@@ -95,7 +95,7 @@
                                 </div>';
                     }
                 }
-                elseif (@$_GET['comingSoon']) {
+                elseif (isset($_GET['commingSoon'])) {
                     $query = "SELECT movie_id, movie_poster FROM movie WHERE movie_releaseDate = 0";
 
                     $result = mysqli_query($conn, $query);
@@ -149,8 +149,8 @@
 
         
        <?php
-            if((@$_GET['onShow']) || (@$_GET['comingSoon'])){
-                echo    '<div class="read-more text-center">
+            if((isset($_GET['onShow'])) || (isset($_GET['commingSoon']))){
+                echo    '<div class="read-more text-center mb-4">
                             <a href="movie.php">
                                 Browse All Movies
                             </a>
@@ -177,11 +177,11 @@
 <script>
     $(document).ready(function() {
         <?php
-            if(@$_GET['onShow']){
-                echo 'active("movie.php?onShow=1");';
+            if(isset($_GET['onShow'])){
+                echo 'active("movie.php?onShow");';
             }
-            elseif (@$_GET['comingSoon']) {
-                echo 'active("movie.php?comingSoon=1");';
+            elseif (isset($_GET['commingSoon'])) {
+                echo 'active("movie.php?comingSoon");';
             }
             else{
                 echo 'filter("searchMovie");';

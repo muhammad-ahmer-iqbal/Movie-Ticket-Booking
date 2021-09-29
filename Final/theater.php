@@ -111,7 +111,7 @@
 </body>
 <script>
     $(document).ready(function() {
-        active("index.php");
+        active("theater.php");
         filter("searchTheater");
     });
 </script>
