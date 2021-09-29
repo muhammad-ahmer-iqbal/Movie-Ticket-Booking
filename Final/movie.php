@@ -24,15 +24,17 @@
 
     <!-- Sub-header Start -->
 
-    <?php include 'reuseable code\header.html'; ?>
+    <?php
+        // if(isset($_SESSION['User']))
+        // {
 
-    <!-- Sub-header End -->
-    <hr class="hr">
-    <!-- Navbar Start -->
-
-    <?php include 'reuseable code\navbar.php'; ?>
-
-    <!-- Navbar End -->
+        include 'reuseable code\header.html';
+        // Sub-header End
+        echo '<hr class="hr">';
+        // Navbar Start
+        include 'reuseable code\navbar.php';
+        // Navbar End
+    ?>
         
     <!-- Movies Center Content Start -->
     <div class="container">
@@ -68,7 +70,7 @@
         <div class="row my-5 check">
 
             <?php
-                $conn = $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
+                $conn = mysqli_connect('localhost', 'root', '', 'movie_booking_system');
 
                 if(@$_GET['onShow']){
                     $query = "SELECT movie.movie_id, movie.movie_poster, movie.movie_releaseDate FROM movie_inslot JOIN movie ON movie_inslot.m_inslot_id = movie.movie_id";

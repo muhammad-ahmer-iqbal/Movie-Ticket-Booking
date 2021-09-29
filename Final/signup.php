@@ -13,7 +13,14 @@
 
 
     <!-- Register Center Content Start -->
-
+    <?php
+        session_start();
+        if(isset($_SESSION['Admin']))
+        {
+            header('location:index.php');
+        }
+        else{
+    ?>
     <div class="register">
         <div class="container">
             <div class="register-body">
@@ -54,7 +61,9 @@
             </div>
         </div>
     </div>
-
+    <?php
+        }
+    ?>
     <!-- Register Center Content End -->
 
 </body>

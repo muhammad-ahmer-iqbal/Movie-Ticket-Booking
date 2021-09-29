@@ -12,7 +12,14 @@
 <body class="body">
 
     <!-- Login Start -->
-
+    <?php
+        session_start();
+        if(isset($_SESSION['User']))
+        {
+            header('location:index.php');
+        }
+        else{
+    ?>
     <div class="login">
         <div class="container">
             <div class="login-body">
@@ -40,7 +47,7 @@
                             <button type="submit" class="btn" name="user" value="user-login">Login</button>
                         </div>
                         <div class="an-account pb-4 text-center">
-                            <a href="signup-form.php">Create an account?</a>
+                            <a href="signup.php">Create an account?</a>
                         </div>
                     </form>
                 </div>
@@ -50,7 +57,9 @@
 
 
     <!-- Login Start -->
-
+    <?php
+        }
+    ?>
 </body>
 
 </html>

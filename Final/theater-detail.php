@@ -55,7 +55,7 @@
 
     <!-- Navbar Start -->
 
-    <?php include 'reuseable code\navbar.php'; ?>
+    <?php session_start(); include 'reuseable code\navbar.php'; ?>
 
     <!-- Navbar End -->
 

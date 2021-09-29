@@ -34,15 +34,15 @@
                         if (isset($_SESSION['User']))
                         {
                             echo    '<li class="nav-item">
-                                        '.$_SESSION['UserName'].'
+                                        <a class="nav-link border-right">'.$_SESSION['UserName'].'</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-danger" href="login.php">Logout</a>
+                                        <a class="nav-link text-danger" href="logout.php?logoutUser">Logout</a>
                                     </li>';
                         }
                         else{
                             echo    '<li class="nav-item">
-                                        <a class="nav-link border-right" href="register.php">Register Now </a>
+                                        <a class="nav-link border-right" href="signup.php">Register Now </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="login.php">Login</a>
