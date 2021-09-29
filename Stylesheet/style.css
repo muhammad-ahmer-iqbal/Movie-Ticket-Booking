@@ -1,0 +1,512 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.body, .adminBody {
+	width: 100%;
+	background-size: cover;
+}
+.body{background: url("../Media/loginwall.jpg") no-repeat center center fixed;}
+.adminBody{background: url("../Media/adminwall.jpg") no-repeat center center fixed;}
+a {
+	text-decoration: none;
+}
+p {
+	color: black;
+	margin: 0px;
+}
+hr {
+	height: 2px !important;
+	background-image: url();
+}
+
+/* Sub header Start */
+
+.sub-header {
+	padding: 10px 0px;
+	background-color: black !important;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	color: white;
+}
+.breadcrumb .breadcrumb-item {
+	color: white;
+}
+.breadcrumb .breadcrumb-item a {
+	color: white;
+	transition: all ease-in-out 0.3s;
+}
+.breadcrumb .breadcrumb-item a:hover {
+	color: rgb(224, 223, 223);
+}
+.sub-header .icon-div .icon .fa-facebook {
+	margin: 0 5px;
+	padding: 10px 12px;
+	border-radius: 20px;
+	background-color: white;
+	color: red;
+	transition: all ease-in-out 0.3s;
+}
+.icon-div .icon {
+	float: right;
+}
+.sub-header .icon-div .icon .fa-facebook:hover {
+	background-color: #1877f2;
+	color: white;
+}
+.sub-header .icon-div .icon .fa-instagram {
+	margin: 0 5px;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: white;
+	color: red;
+	transition: all ease-in-out 0.3s;
+}
+.sub-header .icon-div .icon .fa-instagram:hover {
+	background-image: radial-gradient(#5e4fcc, #d42b86, #f8b860);
+	color: white;
+}
+.sub-header .icon-div .icon .fa-twitter {
+	margin: 0 5px;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: white;
+	color: red;
+	transition: all ease-in-out 0.3s;
+}
+.sub-header .icon-div .icon .fa-twitter:hover {
+	background-color: #1c9cea;
+	color: white;
+}
+
+/* Sub header End */
+
+.hr {
+	margin: 0;
+}
+
+/* Banner Slide Start */
+
+.banner .carousel .carousel-item img {
+	width: 100%;
+	height: 550px;
+}
+.banner .carousel .carousel-indicators button {
+	border-radius: 100%;
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border: 2px solid red;
+}
+.banner .carousel .carousel-indicators .active {
+	background-color: red;
+	border: 2px solid white;
+}
+
+/* Banner Slide End */
+
+/* Navbar Start */
+
+.navbar-brand {
+	width: 20%;
+}
+.navbar-brand img {
+	width: 40%;
+}
+.bg {
+	background-color: black;
+}
+.nav-item .nav-link {
+	transition: all ease-in-out 0.3s;
+	color: white !important;
+}
+.nav-item .nav-link:hover {
+	color: red !important;
+	border-bottom: 1px solid red;
+}
+.nav-item .active {
+	color: red !important;
+	border-bottom: 1px solid red;
+}
+.border-right {
+	border-right: 1px solid white;
+}
+
+/* Navbar End */
+
+/* Index Center Content Start */
+
+.content h5 {
+	color: white;
+}
+.content h6 {
+	color: white;
+}
+.title {
+	color: #1a1a1a;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.content .content-overlay {
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+	opacity: 1;
+}
+
+.content-image {
+	width: 100%;
+}
+
+img {
+	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+.content-details {
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+
+.content-details h3 {
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+.content-details p {
+	color: #fff;
+	font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+	top: 80%;
+}
+
+/* Index Center Content End */
+
+/* Movie Center Content */
+
+.movie {
+	padding: 10px 0 10px 15px;
+	border-left: 5px solid red;
+	background-color: rgb(231, 231, 231);
+}
+.story-line p {
+	text-align: justify;
+}
+.movie-heading {
+	color: red;
+}
+.rate-text {
+	padding: 2px;
+	color: black;
+	background-color: #dca827;
+}
+.rate-no {
+	padding: 2px;
+	color: white;
+	background-color: black;
+}
+
+.full-btn {
+	width: 100%;
+	border-radius: 20px;
+}
+.modal-content {
+	border-radius: 20px;
+}
+.terms-and-condition p {
+	text-align: justify;
+}
+.book-btn {
+	padding: 60px 30px;
+	border-radius: 100%;
+	font-size: 24px;
+}
+.review-mess {
+	padding: 20px;
+	color: white;
+	background-color: black !important;
+}
+.read-more a{
+	padding: 10px 20px;
+	border: 1px solid red;
+	border-radius: 5px;
+	color: black;
+}
+.read-more a:hover{
+	transition: all ease-in-out 0.3s;
+	padding: 10px 20px;
+	background-color: black;
+	border-radius: 5px;
+	color: red;
+}
+
+/* Movie Center Content End */
+
+/* Theater inner page Content Start */
+
+.heading h1 {
+	font-weight: 400;
+}
+.info-and-location p {
+	text-align: justify;
+}
+
+/* Theater inner page Content End */
+
+.heading h1 {
+	font-weight: 500;
+}
+
+/* Footer Start */
+
+footer {
+	padding: 20px 0;
+	background-color: black;
+	background-image: radial-gradient(red, black);
+}
+footer p {
+	margin: 0px;
+	padding: 0px;
+	color: white;
+}
+
+/* Footer End */
+
+/* Form Start */
+
+.register {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+input {
+	border: none !important;
+	border-bottom: 1px solid black !important;
+}
+.form-check-input {
+	border: 1px solid black !important;
+}
+.btn-login a {
+	color: green;
+}
+.btn-login a:hover {
+	color: white;
+}
+
+.login{
+	margin-top: 10% !important;
+	background-color: white;
+	width: 40%;
+	border-radius: 20px;
+	margin: 0 auto;
+}
+.login-btn button{
+	margin: auto;
+	width: 30%;
+	border-radius: 5px;
+	border: 1px solid red;
+	color: black;
+	margin-bottom: 30px;
+}
+.login-btn button:hover{
+	background-color: black;
+	color: red;
+}
+
+.register{
+	margin-top: 10% !important;
+	background-color: white;
+	width: 40%;
+	border-radius: 20px;
+	margin: auto;
+	vertical-align: middle;
+}
+.register-btn button{
+	margin: auto;
+	width: 30%;
+	border-radius: 5px;
+	border: 1px solid green;
+	color: green;
+	margin-bottom: 30px;
+}
+.register-btn button:hover{
+	background-color: green;
+	color: white;
+}
+.an-account a{
+	color: black;
+	transition: all ease-in-out 0.3s;
+}
+.an-account a:hover{
+	color: black;
+	text-decoration: underline;
+}
+.input select{
+	border: none;
+	border-bottom: 1px solid black;
+}
+.btn-booking button{
+	width: 100%;
+	border: 1px solid red;
+}
+.btn-booking button:hover{
+	border: 1px solid red;
+	background-color: black;
+	color: white;
+}
+/* Form End */
+
+/* Media Quries */
+
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+    
+	.login{
+		width: 40%;
+	}
+	.login-btn button{
+		width: 30%;
+	}
+	.register{
+		width: 40%;
+	}
+	.register-btn button{
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .login{
+		width: 60%;
+	}
+	.login-btn button{
+		width: 50%;
+	}
+	.register{
+		width: 60%;
+	}
+	.register-btn button{
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .login{
+		width: 80%;
+	}
+	.login-btn button{
+		width: 80%;
+	}
+	.register{
+		width: 90%;
+	}
+	.register-btn button{
+		width: 90%;
+	}
+}
+
+/* Media Quries End */
+
+/* Rating Stars Start */
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/* Rating Stars End */
