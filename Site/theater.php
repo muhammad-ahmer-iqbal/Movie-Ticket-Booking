@@ -96,6 +96,7 @@
             mysqli_close($conn);
             ?>
         </div>
+    </div>
 
         <!-- Index Center Content End -->
 

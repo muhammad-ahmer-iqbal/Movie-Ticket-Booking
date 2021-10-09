@@ -1,6 +1,6 @@
     <!-- Navbar Start -->
 
-    <nav class="navbar navbar-expand-lg sticky-top bg mb-4">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg mb-4">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <img src="..\Media\Logo.png" class="img-fluid" alt="Logo">
