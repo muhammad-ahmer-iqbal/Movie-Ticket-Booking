@@ -231,7 +231,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe width="100%" height="315" src="../Dashboard/<?php echo $trailer;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video src="https://youtu.be/2kgEc6oH9J0"></video>
+                    <!-- <iframe width="100%" height="315" src=""></iframe> -->
                 </div>
             </div>
         </div>
