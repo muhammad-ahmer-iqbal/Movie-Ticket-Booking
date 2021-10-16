@@ -19,7 +19,7 @@
     <br>
     <section class="home-section-1">
         <div class="heading">
-            <h1 class="display-3 text-center">User</h1>
+            <h1 class="display-3 text-center">Users</h1>
         </div>
         <div class="container">
             <?php 
