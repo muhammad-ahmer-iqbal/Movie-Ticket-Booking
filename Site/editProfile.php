@@ -60,6 +60,12 @@
                             <div class="mb-3">
                                 <label class="form-label">Name</label>
                                 <input type="text" class="form-control" value="<?php echo $name; ?>" name="user_name">
+                                <?php
+                                    if(isset($_SESSION['nameError'])){
+                                        echo '<span class="text-danger font-weight-bold">' . $_SESSION['nameError'] . '</span>';
+                                        session_destroy();
+                                }
+                            ?>
                             </div>
                         </div>
                     </div>
@@ -68,12 +74,28 @@
                             <div class="mb-3">
                                 <label class="form-label">Contact Number</label>
                                 <input type="text" class="form-control" value="<?php echo $contact; ?>" name="user_contactNo">
+                                <?php
+                                    if(isset($_SESSION['contactError'])){
+                                        echo '<span class="text-danger font-weight-bold">' . $_SESSION['contactError'] . '</span>';
+                                        session_destroy();
+                                    }
+                                    if(isset($_SESSION['digitError'])){
+                                        echo '<span class="text-danger font-weight-bold">' . $_SESSION['digitError'] . '</span>';
+                                        session_destroy();
+                                }
+                            ?>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Age</label>
                                 <input type="text" class="form-control" value="<?php echo $age; ?>" name="user_age">
+                                <?php
+                                    if(isset($_SESSION['ageError'])){
+                                        echo '<span class="text-danger font-weight-bold">' . $_SESSION['ageError'] . '</span>';
+                                        session_destroy();
+                                }
+                            ?>
                             </div>
                         </div>
                     </div>
