@@ -4,9 +4,19 @@
 	box-sizing: border-box;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+html,
+.body {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
 .body, .adminBody {
 	width: 100%;
 	background-size: cover;
+}
+.body{
+	display: table-cell;
+	vertical-align: middle;
 }
 .body{background: url("../Media/loginwall.jpg") no-repeat center center fixed;}
 .adminBody{background: url("../Media/adminwall.jpg") no-repeat center center fixed;}
@@ -132,6 +142,17 @@ hr {
 }
 .border-right {
 	border-right: 1px solid white;
+}
+.dropdown button{
+	background-color: transparent;
+	color: white;
+} 
+.dropdown button:hover{
+	background-color: transparent;
+	color: red;
+} 
+.dropdown button:focus:not(:focus-visible) {
+    color: white;
 }
 
 /* Navbar End */

@@ -29,13 +29,20 @@
                         <a class="nav-link" href="contact-us.php">Contact Us</a>
                     </li>
                 </ul>
+
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <?php
                         if (isset($_SESSION['User']))
                         {
-                            echo    '<li class="nav-item">
-                                        <a class="nav-link border-right">'.$_SESSION['UserName'].'</a>
-                                    </li>
+                            echo    '<div class="dropdown">
+                                        <button class="btn btn-drop dropdown-toggle border-right" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            '.$_SESSION['UserName'].'
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="editProfile.php">Edit Profile</a></li>
+                                            <li><a class="dropdown-item" href="changePassword.php">Change Password</a></li>
+                                        </ul>
+                                    </div>
                                     <li class="nav-item">
                                         <a class="nav-link text-danger" href="logout.php?logoutUser">Logout</a>
                                     </li>';

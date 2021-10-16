@@ -130,7 +130,7 @@
             </div>
             <div class="form">
                 <form action="booking-create.php" method="POST">
-                    <input type="hidden" class="form-control" placeholder="Selected Movie" name="booking_movieInSlotId">
+                    <input type="hidden" name="booking_movieInSlotId">
                     <div class="mb-3">
                         <label class="form-label">Name</label>
                         <input type="text" class="form-control" value="<?php echo $_SESSION['UserName']; ?>" name="booking_userName" disabled>
