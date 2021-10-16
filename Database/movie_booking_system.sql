@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2021 at 12:13 PM
+-- Generation Time: Oct 16, 2021 at 11:22 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -60,7 +60,9 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`booking_id`, `booking_userName`, `booking_movieInSlotId`, `booking_className`, `booking_seats`) VALUES
-(1, 'ahmer123', 4, 1, 4);
+(1, 'ahmer123', 4, 1, 4),
+(9, 'ahmer123', 4, 1, 2),
+(10, 'ahmer123', 4, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -335,7 +337,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_password`, `user_contactNo`, `user_age`) VALUES
-('ahmer123', 'Ahmer iqbal', 'ahmer123', '0333333333', 15),
+('ahmer123', 'Ahmer iqbal', 'ahmer123', '033333333', 125),
+('ahmer1234', '123', 'abc123', '0333333333', 20),
+('ahmer1235', 'Ahmer', '123', '03333333333', 12),
+('boss123', 'Boss', 'abc123', '12345678912', 30),
+('boss1234', 'Ahmer iqbal', 'abc123', '0333333333', 20),
+('boss12345', '123', 'abc123', '0333333333', 20),
 ('faizan123', 'Faizan sarwar', 'faizan123', '0333333333', 23);
 
 --
@@ -456,7 +463,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `booking_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `class`
