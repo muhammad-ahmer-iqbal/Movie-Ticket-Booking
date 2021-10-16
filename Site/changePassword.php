@@ -52,6 +52,12 @@
                     <div class="mb-3">
                         <label class="form-label">Old Password</label>
                         <input type="password" class="form-control" name="user_oldPassword">
+                        <?php
+                            if(isset($_SESSION['oldPassword'])){
+                                echo '<span class="text-danger font-weight-bold">' . $_SESSION['oldPassword'] . '</span>';
+                                session_destroy();
+                            }
+                        ?>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -66,6 +72,12 @@
                                 <input type="password" class="form-control" name="user_confirmPassword">
                             </div>
                         </div>
+                        <?php
+                            if(isset($_SESSION['confirmPassword'])){
+                                echo '<span class="text-danger font-weight-bold">' . $_SESSION['confirmPassword'] . '</span>';
+                                session_destroy();
+                            }
+                        ?>
                     </div>
                     </div>
                     <div class="d-grid gap-2 mt-4 w-75 mx-auto">

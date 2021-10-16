@@ -32,5 +32,8 @@ if(isset($_POST['submit']))
             header("location:index.php");
         }
         
+        mysqli_close($conn);
+
+        header("location:editProfile.php");
     }
 ?>

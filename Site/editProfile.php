@@ -64,8 +64,8 @@
                                     if(isset($_SESSION['nameError'])){
                                         echo '<span class="text-danger font-weight-bold">' . $_SESSION['nameError'] . '</span>';
                                         session_destroy();
-                                }
-                            ?>
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -82,8 +82,8 @@
                                     if(isset($_SESSION['digitError'])){
                                         echo '<span class="text-danger font-weight-bold">' . $_SESSION['digitError'] . '</span>';
                                         session_destroy();
-                                }
-                            ?>
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -94,8 +94,8 @@
                                     if(isset($_SESSION['ageError'])){
                                         echo '<span class="text-danger font-weight-bold">' . $_SESSION['ageError'] . '</span>';
                                         session_destroy();
-                                }
-                            ?>
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
