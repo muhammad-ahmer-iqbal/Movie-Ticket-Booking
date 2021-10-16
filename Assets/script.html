@@ -1,7 +1,122 @@
 <script>
+
+    //validation starts
+    const email_pattern = /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$/,
+    mobile_pattern = /^[0-9]{4}([-])?([0-9]{7})?$/,
+    username_pattern = /^[A-Za-z0-9._]{5,10}$/,
+    password_pattern = /^[A-Za-z0-9!@#$%^&*()_-~`:"<>?]{8,20}$/;
+
+    
+    /*Sign up form Start*/
+    function signUp(){
+        const   id = $('[name="user_id"]').value,
+                name = $('[name="user_name"]').value,
+                contact = $('[name="user_contactNo"]').value,
+                age = $('[name="user_age"]').value,
+                password = $('[name="user_password"]').value,
+                confirmPassword = $('[name="user_confirmPassword"]').value;
+        
+        console.log("abc");
+        if (!isNaN(name)) {
+            $("#user_name").text("*Please enter your name using alphabets");
+            return false;
+        }
+        else if (contact.toString().charAt(0) != 0 & contact.toString().charAt(1) != 3) {
+            $("#user_contactNo").text("*Please enter Pakistani mobile number");
+            return false;
+        }
+        else if (!mobile_pattern.test(contact)) {
+            $("#user_contactNo").text("*Please enter valid mobile number");
+            return false;
+        }
+        else if (!username_pattern.test(id)) {
+            $("#user_id").text("*Username must contain alphabet & number");
+            return false;
+        }
+        else if (password.length >=! 8 & password.length <=! 20) {
+            $("#user_password").text("*Password must have 8 to 20 characters");
+            return false;
+        }
+        else if (!password_pattern.test(password)) {
+            $("#user_password").text("*Password must contain alphabet, number & special characters");
+            return false;
+        }
+        else if (password !== confirmPassword) {
+            $("#user_confirmPassword").text("*Password is not matched");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    /*Sign up form End*/
+
+    /*Contact us Start*/
+    function messageValidation(){
+        const name = document.getElementById('yourNameMessage').value,
+            email = document.getElementById('yourEmailMessage').value,
+            comment = document.getElementById('yourCommentMessage').value;
+
+        if (!isNaN(name)) {
+            document.getElementById('nameMessage').innerHTML = "*Please enter your name using alphabets";
+            return false;
+        }
+        else if (!email_pattern.test(email)) {
+            document.getElementById('emailMessage').innerHTML = "*Please enter correct email";
+            return false;
+        }
+        else if (comment == "") {
+            window.alert("Please enter your message before submission");
+            return false;
+        }
+        else {
+            document.getElementById('nameMessage').innerHTML = "";
+            document.getElementById('emailMessage').innerHTML = "";
+
+            document.getElementById('yourNameMessage').value = "";
+            document.getElementById('yourEmailMessage').value = "";
+            document.getElementById('yourCommentMessage').value = "";
+            return true;
+        }
+    }
+
+    function orderValidation(){
+        const name = document.getElementById('yourNameOrder').value,
+            email = document.getElementById('yourEmailOrder').value,
+            address = document.getElementById('yourAddressOrder').value;
+
+        if (!isNaN(name)) {
+            document.getElementById('nameOrder').innerHTML = "*Please your name using alphabets";
+            return false;
+        }
+        else if (!email_pattern.test(email)) {
+            document.getElementById('emailOrder').innerHTML = "*Please enter correct email";
+            return false;
+        }
+        else if (address == "") {
+            document.getElementById('addressOrder').innerHTML = "*Please enter your address";
+            return false;
+        }
+        else {
+            document.getElementById('nameOrder').innerHTML = "";
+            document.getElementById('emailOrder').innerHTML = "";
+            document.getElementById('addressOrder').innerHTML = "";
+
+            document.getElementById('yourNameOrder').value = "";
+            document.getElementById('yourEmailOrder').value = "";
+            document.getElementById('yourAddressOrder').value = "";
+            return true;
+        }
+    }
+    /*Contact us End*/
+
+
+    //making links active
     function active(link) {
         $('[href="' + link + '"]').addClass("active");
     }
+
+    //filter the list
     function filter(id) {
         $("#"+id).on("keyup", function() {
             var value = $(this).val().toLowerCase();

@@ -32,22 +32,63 @@
                 <div class="inputs">
                     <form action="user-create.php" method="POST">
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter User ID*" name="user_id">
+                            <input type="text" class="form-control" placeholder="Enter User ID*" name="user_id" required>
+                            <span id="user_id" class="text-muted font-weight-bold">Try to use different User ID using characters and numbers</span>
+                            <br>
+                            <?php
+                                if(isset($_SESSION['userExist'])){
+                                    echo '<span class="text-danger font-weight-bold">' . $_SESSION['userExist'] . '</span>';
+                                    session_destroy();
+                                }
+                            ?>
                         </div>
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Name*" name="user_name">
+                            <input type="text" class="form-control" placeholder="Enter Name*" name="user_name" required>
+                            <?php
+                                if(isset($_SESSION['nameError'])){
+                                    echo '<span class="text-danger font-weight-bold">' . $_SESSION['nameError'] . '</span>';
+                                    session_destroy();
+                                }
+                            ?>
+                            <span id="user_name"></span>
                         </div>
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Number*" name="user_contactNo">
+                            <input type="number" class="form-control" placeholder="Enter Your Contact Number* (03XXXXXXXXX)" name="user_contactNo" required>
+                            <?php
+                                if(isset($_SESSION['contactError'])){
+                                    echo '<span class="text-danger font-weight-bold">' . $_SESSION['contactError'] . '</span>';
+                                    session_destroy();
+                                }
+                                if(isset($_SESSION['digitError'])){
+                                    echo '<span class="text-danger font-weight-bold">' . $_SESSION['digitError'] . '</span>';
+                                    session_destroy();
+                                }
+                            ?>
+                            <span id="user_contactNo"></span>
                         </div>
                         <div class="input mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Age*" name="user_age">
+                            <input type="number" class="form-control" placeholder="Enter Age*" name="user_age" required>
+                            <?php
+                                if(isset($_SESSION['ageError'])){
+                                    echo '<span class="text-danger font-weight-bold">' . $_SESSION['ageError'] . '</span>';
+                                    session_destroy();
+                                }
+                            ?>
+                            <span id="user_age"></span>
                         </div>
                         <div class="input mb-3">
-                            <input type="password" class="form-control" placeholder="Enter Password*" name="user_password">
+                            <input type="password" class="form-control" placeholder="Enter Password*" name="user_password" required>
+                            <span id="user_password"></span>
                         </div>
                         <div class="input mb-5">
-                            <input type="password" class="form-control" placeholder="Enter Confirm-Password*" name="user_confirmPassword">
+                            <input type="password" class="form-control" placeholder="Enter Confirm-Password" name="user_confirmPassword" required>
+                            <?php
+                                if(isset($_SESSION['passwordError'])){
+                                    echo '<span class="text-danger font-weight-bold">' . $_SESSION['passwordError'] . '</span>';
+                                    session_destroy();
+                                }
+                            ?>
+                            <span id="user_confirmPassword"></span>
                         </div>
 
                         <div class="register-btn mb-2 text-center">
@@ -63,6 +104,7 @@
     </div>
     <?php
         }
+        // include '..\Assets\script.html';
     ?>
     <!-- Register Center Content End -->
 

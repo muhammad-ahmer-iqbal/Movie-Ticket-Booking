@@ -44,10 +44,10 @@
         <div class="container mb-3">
             <div class="heading">
                 <h1 class="display-3 text-center">
-                    Edit your profile
+                    Edit Your Profile
                 </h1>
             </div>
-            <div class="form">
+            <div class="form w-75 mx-auto">
                 <form action="user-edit.php" method="POST">
                     <div class="row">
                         <div class="col-md-6">
@@ -73,11 +73,11 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Age</label>
-                                <input type="text" class="form-control" value="22" name="user_age">
+                                <input type="text" class="form-control" value="<?php echo $age; ?>" name="user_age">
                             </div>
                         </div>
                     </div>
-                    <div class="d-grid gap-2 mt-4">
+                    <div class="d-grid gap-2 mt-4 w-75 mx-auto">
                         <button class="btn btn-dark" type="submit" name="submit" value="submit">Edit</button>
                     </div>
                 </form>

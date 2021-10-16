@@ -66,11 +66,6 @@
                                 echo '<option value="' . $opt['m_inslot_id'] . '">' . $opt['m_inslot_movieName'] . '</option>';
                             }
                         ?>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Three</option>
-                        <option value="5">Three</option>
                     </select>
                 </div>
             </div>
@@ -157,8 +152,8 @@
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
-                                    <option value="4">Three</option>
-                                    <option value="5">Three</option>
+                                    <option value="4">Four</option>
+                                    <option value="5">Five</option>
                                 </select>
                             </div>
                         </div>
